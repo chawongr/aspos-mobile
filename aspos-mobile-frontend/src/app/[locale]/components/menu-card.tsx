@@ -27,7 +27,7 @@ export default function MenuCard({ imageUrl, title, description, price, quantity
         {/* Content */}
         <div className="flex-grow flex flex-col justify-between">
             <div>
-                <h3 className="text-base font-medium text-darkGray">{title}</h3>
+                <h3 className="text-base font-medium line-clamp-1 text-darkGray">{title}</h3>
                 <p className="text-sm text-lightGray line-clamp-2">{description}</p>
             </div>
             <div className='flex justify-between items-center'>
