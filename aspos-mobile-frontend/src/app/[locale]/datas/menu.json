@@ -1,0 +1,69 @@
+{
+    "id": 1,
+    "category": [
+      {
+        "id": 101,
+        "name": "Beverage",
+        "menu": [
+          {
+            "id": 1,
+            "name": "Coffee",
+            "description": "Freshly brewed coffee with a rich aroma."
+          },
+          {
+            "id": 2,
+            "name": "Tea",
+            "description": "A soothing cup of tea in various flavors."
+          },
+          {
+            "id": 3,
+            "name": "Smoothie",
+            "description": "A refreshing fruit smoothie made to order."
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "name": "Main Course",
+        "menu": [
+          {
+            "id": 4,
+            "name": "Grilled Chicken",
+            "description": "Succulent grilled chicken with herbs."
+          },
+          {
+            "id": 5,
+            "name": "Pasta",
+            "description": "Creamy Alfredo pasta with garlic bread."
+          },
+          {
+            "id": 6,
+            "name": "Veggie Burger",
+            "description": "A wholesome veggie patty with fresh toppings."
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "Desserts",
+        "menu": [
+          {
+            "id": 7,
+            "name": "Chocolate Cake",
+            "description": "Rich and moist chocolate cake."
+          },
+          {
+            "id": 8,
+            "name": "Ice Cream",
+            "description": "Delicious ice cream with assorted flavors."
+          },
+          {
+            "id": 9,
+            "name": "Fruit Tart",
+            "description": "A crisp tart filled with fresh fruits."
+          }
+        ]
+      }
+    ]
+  }
+  
