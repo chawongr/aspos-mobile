@@ -23,7 +23,7 @@ export default function MenuCard({ imageUrl, title, description, price, quantity
         />
       </div>
 
-      <div className='flex'>
+      <div className='flex w-full'>
         {/* Content */}
         <div className="flex-grow flex flex-col justify-between">
             <div>
