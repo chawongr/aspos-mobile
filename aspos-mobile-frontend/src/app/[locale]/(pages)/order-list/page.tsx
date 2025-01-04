@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import OrderAllCard from '../../components/order-all-card';
+import OrderCard from '../../components/order-all-card';
 import { Food2 } from '@/app/[locale]/components/all-image'
 import { IoClose } from "react-icons/io5";
 import OrderData from '../../datas/order.json';
@@ -19,7 +19,7 @@ interface Order{
   status: string;
 }
 
-export default function OrderListAll() {
+export default function OrderList() {
   const path = usePathname().substring(1);
   const lang = path.split('/')[0];
 
@@ -44,7 +44,7 @@ export default function OrderListAll() {
           <IoClose className="w-7 h-7 md:w-9 md:h-9" />
         </Link>
         <div className='flex flex-col items-center'>
-          <h1 className="text-xl md:text-3xl font-semibold">รายการทั้งหมด</h1>
+          <h1 className="text-xl md:text-3xl font-semibold">รายการที่สั่ง</h1>
           <p className="text-sm md:text-lg text-gray-500">ข้อมูล ณ เวลา {formatTime(totalAmount.time)}</p>
         </div>
         <div className="w-7 h-7 md:w-9 md:h-9"/>
@@ -53,7 +53,7 @@ export default function OrderListAll() {
       <div className="flex-1 overflow-y-auto">
         {orders.map((order, index) => (
           <div key={order.id} className={`${index !== orders.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`} >
-          <OrderAllCard
+          <OrderCard
             key={order.id}
             imageUrl={Food2}
             title={order.title}

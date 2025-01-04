@@ -10,7 +10,7 @@ interface OrderCardProps {
     status: string
 }
 
-export default function OrderAllCard({ imageUrl, title, description, price, quantity, status }: OrderCardProps) {
+export default function OrderCard({ imageUrl, title, description, price, quantity, status }: OrderCardProps) {
 //   const t = useTranslations('OrderCard');
     const getStatusClass = () => {
         if (status === 'กำลังทำ') {
