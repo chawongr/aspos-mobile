@@ -1,15 +1,24 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 import "./globals.css";
+import { Noto_Sans_Thai } from "next/font/google";
+
+
+const noto = Noto_Sans_Thai({
+  subsets: ['latin'],
+  weight: ['100', '200','300', '400','500','600', '700'],
+  display: 'swap',
+});
+
 
 export default async function LocaleLayout({
   children,
   params
 }: {
   children: React.ReactNode;
-  params: {locale: string};
+  params: { locale: string };
 }) {
   // Ensure that the `params` object is resolved before accessing its properties
   const { locale } = await Promise.resolve(params);
@@ -24,7 +33,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className={`${noto.className} p-5 md:p-10 text-sm text-[#3d3d3d]`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
