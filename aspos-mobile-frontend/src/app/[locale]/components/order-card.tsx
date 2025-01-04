@@ -25,7 +25,7 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
     return (
         <div className="w-full py-4 border-b border-borderGray flex gap-3">
             {/* Image */}
-        <div className="w-[85px] h-[85px] flex-shrink-0">
+        <div className="w-[85px] h-[85px] md:w-[105px] md:h-[105px] flex-shrink-0">
             <Image
             src={imageUrl}
             alt={title}
@@ -39,11 +39,11 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
             {/* Content-Middle */}
             <div className="flex-grow flex flex-col justify-between">
                 <div>
-                    <h3 className="text-base font-medium  line-clamp-1 text-darkGray">{title}</h3>
-                    <p className="text-sm text-lightGray line-clamp-1">{description}</p>
+                    <h3 className="text-base md:text-xl font-medium line-clamp-1 text-darkGray">{title}</h3>
+                    <p className="text-sm md:text-lg text-lightGray line-clamp-1">{description}</p>
                 </div>
                 <div className='flex justify-between items-center'>
-                    <div className={`flex items-center justify-center rounded-md py-1 px-2 text-sm text-white ${getStatusClass()}`}>
+                    <div className={`flex items-center justify-center rounded-md py-1 px-2 text-sm md:text-lg text-white ${getStatusClass()}`}>
                         {status}
                     </div>
                 </div>
@@ -51,8 +51,8 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
 
             {/* Content-Right */}
             <div className='flex flex-col justify-between items-end'>
-                <div className="text-base font-semibold text-darkGray">฿{price}</div>
-                <div className="flex items-center justify-center w-[22px] h-[22px] rounded-full bg-green text-[13px] font-semibold text-white">
+                <div className="text-base  md:text-xl font-semibold text-darkGray">฿{price}</div>
+                <div className="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-full bg-green text-sm md:text-lg font-semibold text-white">
                     {quantity}
                 </div>
             </div>
