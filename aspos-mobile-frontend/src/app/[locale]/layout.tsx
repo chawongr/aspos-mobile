@@ -33,7 +33,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${noto.className} px-5 md:px-10 h-screen w-screen box-border text-sm text-darkGray`}
+      <body className={`${noto.className} p-5 md:p-10 h-screen w-screen box-border text-sm text-darkGray`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
