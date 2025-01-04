@@ -19,7 +19,7 @@ interface Order{
   status: string;
 }
 
-export default function OrderList() {
+export default function OrderListAll() {
   const path = usePathname().substring(1);
   const lang = path.split('/')[0];
 
@@ -32,14 +32,14 @@ export default function OrderList() {
   }
 
   // Format time function
-  const formatTime = (time) => {
+  const formatTime = (time:string) => {
     const [hours, minutes, seconds] = time.split(":");
     return `${hours}:${minutes}`; // Remove seconds
   };
 
   return (
     <div className="flex flex-col relative">
-      <header className='sticky top-0 w-full-p-5 md:w-full-p-10 py-3 md:py-7 flex justify-between items-center gap-2 md:gap-4 bg-white' >
+      <header className='sticky top-0 w-full-p-5 md:w-full-p-10 pb-3 md:pb-7 flex justify-between items-center gap-2 md:gap-4 bg-white' >
         <Link href={`/${lang}`}>
           <IoClose className="w-7 h-7 md:w-9 md:h-9" />
         </Link>
