@@ -18,6 +18,10 @@ export default {
         borderGray:"#C6C6C6",
         orange:"#F6A047"
       },
+      width: {
+        'full-p-5': 'calc(100vw - 2.5rem)', // For p-5 (2.5rem = 5 * 16px)
+        'full-p-10': 'calc(100vw - 5rem)',  // For p-10 (5rem = 10 * 16px)
+      },
     },
   },
   plugins: [],

@@ -23,7 +23,7 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
     };
 
     return (
-        <div className="w-full py-4 border-b border-borderGray flex gap-3">
+        <div className="w-full py-4 flex gap-3">
             {/* Image */}
         <div className="w-[85px] h-[85px] md:w-[105px] md:h-[105px] flex-shrink-0">
             <Image
