@@ -11,7 +11,7 @@ interface MenuCardProps {
 
 export default function MenuCard({ imageUrl, title, description, price, quantity }: MenuCardProps) {
     return (
-    <div className="w-full py-4 border-b border-borderGray flex gap-3">
+    <div className="w-full py-4 flex gap-3">
         {/* Image */}
       <div className="w-[105px] h-[105px] md:w-[125px] md:h-[125px] flex-shrink-0">
         <Image
