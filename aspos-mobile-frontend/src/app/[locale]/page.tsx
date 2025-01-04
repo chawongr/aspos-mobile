@@ -9,6 +9,10 @@ import { TfiMenuAlt } from "react-icons/tfi";
 import CategoryTabs from './components/category-tab';
 import CategoriesData from './datas/menu.json';
 import MenuCard from './components/menu-card';
+import Link from 'next/link';
+import { usePathname, useRouter } from "next/navigation";
+
+
 
 interface MenuItem {
   id: number;
@@ -27,17 +31,20 @@ interface Category {
 export default function Home() {
   const t = useTranslations('HomePage');
 
+  const path = usePathname().substring(1);
+
+
+
   const Categories: Category[] = CategoriesData.category;
 
   const handleTabClick = (categoryId: number) => {
-    const stickyHeight = 150; 
+    const stickyHeight = 170;
     const section = document.getElementById(`category-${categoryId}`);
     if (section) {
-        const offset = section.offsetTop - stickyHeight;
-        window.scrollTo({ top: offset, behavior: "smooth" });
+      const offset = section.offsetTop - stickyHeight;
+      window.scrollTo({ top: offset, behavior: "smooth" });
     }
-};
-
+  };
 
   return (
     <div className="relative">
@@ -46,12 +53,15 @@ export default function Home() {
         {/* Banner */}
         <div className="flex justify-between items-center ">
           <div>
-            <div className="text-xl md:text-3xl font-semibold">Hi Chawong 👋</div>
-            <div className="text-sm md:text-lg text-gray-600">Hope you enjoy eating!</div>
+            <div className='flex'>
+              <div className="text-xl md:text-3xl font-semibold">Hi</div>
+              <div className="text-xl md:text-3xl font-semibold ml-1 truncate max-w-28">Chawong</div>
+              <div className="text-xl md:text-3xl font-semibold ml-1">👋</div>
+            </div>
+            <div className="text-sm md:text-lg text-gray-600 mt-1">Hope you enjoy eating!</div>
           </div>
-          <div className="flex items-center gap-x-3">
-
-            <div className=' w-[32px] h-[32px] md:w-[52px] md:h-[52px] bg-red-500ป'>
+          <div className="flex items-end mt-4 gap-x-5 md:gap-x-7">
+            <div className=' w-[24px] h-[24px] md:w-[36px] md:h-[36px] bg-red-500ป'>
               <Image
                 src={Bell}
                 alt="Bell Icon"
@@ -59,15 +69,17 @@ export default function Home() {
                 height={64}
               />
             </div>
-            <div className='w-[28px] h-[28px] mb-1 md:mb-2 md:w-[42px] md:h-[42px] bg-cyan-500ป'>
-              <Image
-                src={Bill}
-                alt="Bill Icon"
-                width={64}
-                height={64}
-              />
-            </div>
-            <div className="w-8 h-8 md:w-11 md:h-11 md:mb-1 rounded-full overflow-hidden ">
+            <Link href={`${path}/order-list-all`}>
+              <div className='w-[22px] h-[22px] mb-1 md:mb-1 md:w-[32px] md:h-[32px]'>
+                <Image
+                  src={Bill}
+                  alt="Bill Icon"
+                  width={64}
+                  height={64}
+                />
+              </div>
+            </Link>
+            <div className="w-6 h-6 md:w-8 md:h-8 md:mb-[2px] rounded-full overflow-hidden ">
               <Image
                 src={ThFlag}
                 alt="Thai Flag"
@@ -80,7 +92,7 @@ export default function Home() {
         </div>
 
         {/* Search */}
-        <div className="flex items-center py-3">
+        <div className="flex items-center pt-3">
           <div className="flex bg-gray-100 rounded-full px-4 py-2 w-full h-10">
             <div className="text-green text-lg my-auto">
               <FiSearch />
@@ -99,14 +111,14 @@ export default function Home() {
         </div>
 
         {/* Category */}
-        <div className="bg-white flex w-full items-center">
+        <div className="bg-white flex w-full items-center pt-2 pb-2">
           {/* Sticky Icon */}
           <div className="sticky left-0 top-0 z-50 bg-white p-2 text-2xl">
             <TfiMenuAlt />
           </div>
 
           {/* Sliding Tabs */}
-          <div className="ml-2 flex-grow overflow-x-auto">
+          <div className="flex-grow overflow-x-auto">
             <CategoryTabs
               categories={Categories.map((category) => ({
                 id: category.id,
@@ -116,26 +128,30 @@ export default function Home() {
             />
           </div>
         </div>
-
       </div>
 
       {/* Content */}
-      <div className="mt-4 ">
+      <div className="pt-3 ">
         {Categories.map((category) => (
           <div key={category.id} id={`category-${category.id}`} className="mb-4">
             <h2 className="text-xl font-semibold mb-1">{category.name}</h2>
             <div>
-              {category.menu.map((menuItem) => (
-                <MenuCard
+              {category.menu.map((menuItem, index) => (
+                <div
                   key={menuItem.id}
-                  imageUrl={Food1}
-                  title={menuItem.name}
-                  description={menuItem.description}
-                  price={menuItem.price}
-                  quantity={menuItem.quantity}
-                />
+                  className={`${index !== category.menu.length - 1 ? 'border-b-[0.5px] border-borderGray' : ''}`}
+                >
+                  <MenuCard
+                    imageUrl={Food1}
+                    title={menuItem.name}
+                    description={menuItem.description}
+                    price={menuItem.price}
+                    quantity={menuItem.quantity}
+                  />
+                </div>
               ))}
             </div>
+
           </div>
         ))}
       </div>

@@ -15,7 +15,7 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
     const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
     const handleScroll = () => {
-        const stickyHeight = 150; 
+        const stickyHeight = 170; 
         const sections = categories.map((category) =>
             document.getElementById(`category-${category.id}`)
         );
@@ -46,7 +46,7 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
     }, [activeCategory]);
 
     return (
-        <div className="flex space-x-4 overflow-x-auto p-2">
+        <div className="flex space-x-3 overflow-x-auto p-2">
             {categories.map((category, index) => (
                 <button
                     key={category.id}
