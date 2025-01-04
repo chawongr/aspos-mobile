@@ -55,7 +55,7 @@ export default function Home() {
           <div>
             <div className='flex'>
               <div className="text-xl md:text-3xl font-semibold">Hi</div>
-              <div className="text-xl md:text-3xl font-semibold ml-1 truncate max-w-28">Chawong</div>
+              <div className="text-xl md:text-3xl font-semibold ml-1 truncate max-w-28 md:max-w-44">Chawong</div>
               <div className="text-xl md:text-3xl font-semibold ml-1">👋</div>
             </div>
             <div className="text-sm md:text-lg text-gray-600 mt-1">Hope you enjoy eating!</div>
