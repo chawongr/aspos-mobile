@@ -14,7 +14,9 @@ export default {
         darkGray: "#3d3d3d",
         green:"#1B5D35",
         lightGray:"#787878",
-        lightBg:"#F1F5F5"
+        lightBg:"#F1F5F5",
+        borderGray:"#C6C6C6",
+        orange:"#F6A047"
       },
     },
   },
