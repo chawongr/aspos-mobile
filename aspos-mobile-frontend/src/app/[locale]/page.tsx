@@ -30,11 +30,14 @@ export default function Home() {
   const Categories: Category[] = CategoriesData.category;
 
   const handleTabClick = (categoryId: number) => {
+    const stickyHeight = 150; 
     const section = document.getElementById(`category-${categoryId}`);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+        const offset = section.offsetTop - stickyHeight;
+        window.scrollTo({ top: offset, behavior: "smooth" });
     }
-  };
+};
+
 
   return (
     <div className="relative">

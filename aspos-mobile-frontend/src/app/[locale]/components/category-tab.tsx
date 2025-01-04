@@ -15,6 +15,7 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
     const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
     const handleScroll = () => {
+        const stickyHeight = 150; 
         const sections = categories.map((category) =>
             document.getElementById(`category-${category.id}`)
         );
@@ -23,7 +24,7 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
         sections.forEach((section, index) => {
             if (section) {
                 const { offsetTop, offsetHeight } = section;
-                if (scrollTop >= offsetTop && scrollTop < offsetTop + offsetHeight) {
+                if (scrollTop + stickyHeight >= offsetTop && scrollTop + stickyHeight < offsetTop + offsetHeight) {
                     setActiveCategory(categories[index].id);
                 }
             }
@@ -58,9 +59,9 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
                         onTabClick(category.id);
                     }}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium ${activeCategory === category.id
-                            ? "bg-green text-white"
-                            : "bg-lightBg"
-                        }`}
+                        ? "bg-green text-white"
+                        : "bg-lightBg"
+                    }`}
                 >
                     <div className="truncate w-20">{category.name}</div>
                 </button>
@@ -69,6 +70,5 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
     );
 };
 
+
 export default CategoryTabs;
-
-
