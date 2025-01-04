@@ -1,7 +1,7 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
-interface OrderCardProps {
+interface MenuCardProps {
     imageUrl: string | StaticImageData; 
     title: string;
     description: string;
@@ -9,7 +9,7 @@ interface OrderCardProps {
     quantity: number;
 }
 
-export default function OrderCard({ imageUrl, title, description, price, quantity }: OrderCardProps) {
+export default function MenuCard({ imageUrl, title, description, price, quantity }: MenuCardProps) {
     return (
     <div className="w-full py-4 border-b border-borderGray flex gap-3">
         {/* Image */}
