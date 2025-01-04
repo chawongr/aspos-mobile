@@ -38,7 +38,7 @@ export default function Home() {
   const Categories: Category[] = CategoriesData.category;
 
   const handleTabClick = (categoryId: number) => {
-    const stickyHeight = 170;
+    const stickyHeight = 160;
     const section = document.getElementById(`category-${categoryId}`);
     if (section) {
       const offset = section.offsetTop - stickyHeight;

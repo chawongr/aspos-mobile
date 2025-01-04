@@ -15,7 +15,7 @@ const CategoryTabs: React.FC<Props> = ({ categories, onTabClick }) => {
     const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
     const handleScroll = () => {
-        const stickyHeight = 170; 
+        const stickyHeight = 160; 
         const sections = categories.map((category) =>
             document.getElementById(`category-${category.id}`)
         );
