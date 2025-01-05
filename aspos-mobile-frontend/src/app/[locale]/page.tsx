@@ -1,5 +1,6 @@
-'use client'
+'use client';
 
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ThFlag, Bell, Bill, Food1 } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
@@ -10,7 +11,8 @@ import CategoryTabs from './components/category-tab';
 import CategoriesData from './datas/menu.json';
 import MenuCard from './components/menu-card';
 import Link from 'next/link';
-import { usePathname, useRouter } from "next/navigation";
+import LocalSwitcher from './components/local-switcher';
+import { usePathname } from "next/navigation";
 
 
 
@@ -29,39 +31,39 @@ interface Category {
 }
 
 export default function Home() {
-  const t = useTranslations('HomePage');
+  const MenuPage = useTranslations('MenuPage');
+  const Categories: Category[] = CategoriesData.category;
 
   const path = usePathname().substring(1);
 
 
-
-  const Categories: Category[] = CategoriesData.category;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleTabClick = (categoryId: number) => {
-    const stickyHeight = 160;
+    const stickyHeight = 150;
     const section = document.getElementById(`category-${categoryId}`);
     if (section) {
       const offset = section.offsetTop - stickyHeight;
       window.scrollTo({ top: offset, behavior: "smooth" });
     }
+    setIsModalOpen(false);
   };
 
   return (
     <div className="relative">
       {/* Fixed Header */}
-      <div className="sticky top-0 z-50 bg-white" >
-        {/* Banner */}
-        <div className="flex justify-between items-center ">
+      <div className="sticky top-0 z-50 bg-white">
+        <div className="flex justify-between items-center">
           <div>
-            <div className='flex'>
-              <div className="text-xl md:text-3xl font-semibold">Hi</div>
+            <div className="flex">
+              <div className="text-xl md:text-3xl font-semibold">{MenuPage('title')}</div>
               <div className="text-xl md:text-3xl font-semibold ml-1 truncate max-w-28 md:max-w-44">Chawong</div>
               <div className="text-xl md:text-3xl font-semibold ml-1">👋</div>
             </div>
-            <div className="text-sm md:text-lg text-gray-600 mt-1">Hope you enjoy eating!</div>
+            <div className="text-sm md:text-lg text-gray-600 mt-1">{MenuPage('subtitle')}</div>
           </div>
           <div className="flex items-end mt-4 gap-x-5 md:gap-x-7">
-            <div className=' w-[24px] h-[24px] md:w-[36px] md:h-[36px] bg-red-500ป'>
+            <div className="w-[24px] h-[24px] md:w-[36px] md:h-[36px] bg-red-500ป">
               <Image
                 src={Bell}
                 alt="Bell Icon"
@@ -70,7 +72,7 @@ export default function Home() {
               />
             </div>
             <Link href={`${path}/order-list-all`}>
-              <div className='w-[22px] h-[22px] mb-1 md:mb-1 md:w-[32px] md:h-[32px]'>
+              <div className="w-[22px] h-[22px] mb-1 md:mb-1 md:w-[32px] md:h-[32px]">
                 <Image
                   src={Bill}
                   alt="Bill Icon"
@@ -79,15 +81,7 @@ export default function Home() {
                 />
               </div>
             </Link>
-            <div className="w-6 h-6 md:w-8 md:h-8 md:mb-[2px] rounded-full overflow-hidden ">
-              <Image
-                src={ThFlag}
-                alt="Thai Flag"
-                className="object-cover w-full h-full"
-                width={64}
-                height={64}
-              />
-            </div>
+            <LocalSwitcher/>
           </div>
         </div>
 
@@ -110,10 +104,12 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Category */}
         <div className="bg-white flex w-full items-center pt-2 pb-2">
-          {/* Sticky Icon */}
-          <div className="sticky left-0 top-0 z-50 bg-white p-2 text-2xl">
+          {/* Hamburger Menu */}
+          <div
+            className="sticky left-0 top-0 z-50 bg-white pr-2 text-2xl cursor-pointer"
+            onClick={() => setIsModalOpen(true)}
+          >
             <TfiMenuAlt />
           </div>
 
@@ -130,8 +126,44 @@ export default function Home() {
         </div>
       </div>
 
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-end justify-center"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="bg-white w-full h-1/2 rounded-xl shadow-lg overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sticky top-0 bg-white z-10 p-4 border-b">
+              <div className="flex justify-between items-center">
+                <h2 className="text-xl font-bold">Categories</h2>
+                <button
+                  className="text-gray-500 hover:text-gray-800"
+                  onClick={() => setIsModalOpen(false)}
+                />                  
+              </div>
+            </div>
+
+            <div className="px-3 py-2 max-h-[70vh] overflow-y-auto">
+              {Categories.map((category) => (
+                <button
+                  key={category.id}
+                  className="block w-full text-left py-2 px-4 hover:bg-gray-100 rounded-lg"
+                  onClick={() => handleTabClick(category.id)}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+
+
       {/* Content */}
-      <div className="pt-3 ">
+      <div className="">
         {Categories.map((category) => (
           <div key={category.id} id={`category-${category.id}`} className="mb-4">
             <h2 className="text-xl font-semibold mb-1">{category.name}</h2>
@@ -151,13 +183,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
           </div>
         ))}
       </div>
-
     </div>
   );
 }
-
 
