@@ -1,7 +1,7 @@
 {
-    "HomePage": {
-      "title": "สวัสดีชาวโลก!",
-      "about": "เทสๆ"
+   "MenuPage": {
+      "title": "สวัสดี",
+      "subtitle": "เพลิดเพลินไปกับมื้ออาหาร!"
     },
     "OrderPage": {
       "title": "รายการที่สั่ง",
