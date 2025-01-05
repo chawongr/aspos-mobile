@@ -2,5 +2,23 @@
     "HomePage": {
       "title": "สวัสดีชาวโลก!",
       "about": "เทสๆ"
+    },
+    "OrderPage": {
+      "title": "รายการที่สั่ง",
+      "description": "ข้อมูล ณ เวลา ",
+      "order": "รายการ",
+      "button":"ส่งรายการ"
+    },
+    "OrderAllPage": {
+      "title": "รายการที่สั่งทั้งหมด",
+      "description": "ข้อมูล ณ เวลา ",
+      "order": "รายการ",
+      "button":"บิลค่าาหาร"
+    },
+    "DeleteModal":{
+      "title": "ยืนยันการลบ",
+      "description": "คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?",
+      "cancleBtn": "ยกเลิก",
+      "deleteBtn":"ลบ"
     }
   }
