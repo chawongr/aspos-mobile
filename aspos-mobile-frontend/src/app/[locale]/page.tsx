@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { ThFlag, Bell, Bill, Food1 } from '@/app/[locale]/components/all-image';
+import { Bell, Bill, Food1 } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 import { FiSearch } from "react-icons/fi";
 import { IoChevronForward } from "react-icons/io5";
@@ -13,8 +13,6 @@ import MenuCard from './components/menu-card';
 import Link from 'next/link';
 import LocalSwitcher from './components/local-switcher';
 import { usePathname } from "next/navigation";
-
-
 
 interface MenuItem {
   id: number;
@@ -144,7 +142,6 @@ export default function Home() {
                 />                  
               </div>
             </div>
-
             <div className="px-3 py-2 max-h-[70vh] overflow-y-auto">
               {Categories.map((category) => (
                 <button
@@ -159,8 +156,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-
 
       {/* Content */}
       <div className="">
