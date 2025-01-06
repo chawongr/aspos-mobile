@@ -6,9 +6,8 @@ import { Food2 } from '@/app/[locale]/components/all-image'
 import { IoClose } from "react-icons/io5";
 import { PiRocketLaunchLight } from "react-icons/pi";
 import OrderData from '../../datas/order.json';
-import { CiViewList } from "react-icons/ci";
 import Link from 'next/link';
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
 
 interface Order{
