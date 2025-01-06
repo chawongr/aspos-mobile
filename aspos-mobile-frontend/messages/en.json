@@ -21,5 +21,10 @@
       "description": "Are you sure you want to delete this item?",
       "cancleBtn": "Cancel",
       "deleteBtn":"Delete"
+    },
+    "TableModal":{
+        "branch": "Branch",
+        "shareqr": "Share QR to friends",
+        "scanqr": "Just have your friend scan the QR code"
     }
   }

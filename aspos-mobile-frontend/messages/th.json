@@ -20,5 +20,10 @@
       "description": "คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?",
       "cancleBtn": "ยกเลิก",
       "deleteBtn":"ลบ"
+    },
+    "TableModal":{
+        "branch": "สาขา",
+        "shareqr": "แชร์ QR ให้เพื่อน",
+        "scanqr": "เพียงให้เพื่อนสแกน QR Code"
     }
   }

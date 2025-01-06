@@ -6,6 +6,7 @@ import Food3 from '../../../../public/food3.jpg'
 import Food4 from '../../../../public/food4.jpg'
 import Bell from '../../../../public/bell.svg'
 import Bill from '../../../../public/bill.svg'
+import Qr from '../../../../public/qr.jpeg'
 
 export { 
     ThFlag,
@@ -15,5 +16,6 @@ export {
     Food3,
     Food4,
     Bell,
-    Bill
+    Bill,
+    Qr
 }

@@ -13,6 +13,7 @@ import MenuCard from './components/menu-card';
 import Link from 'next/link';
 import LocalSwitcher from './components/local-switcher';
 import { usePathname } from "next/navigation";
+import TableModal from './components/table-modal';
 
 interface MenuItem {
   id: number;
@@ -36,6 +37,8 @@ export default function Home() {
 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTableModalOpen, setIsTableModalOpen] = useState(false);
+
 
   const handleTabClick = (categoryId: number) => {
     const stickyHeight = 150;
@@ -79,7 +82,7 @@ export default function Home() {
                 />
               </div>
             </Link>
-            <LocalSwitcher/>
+            <LocalSwitcher />
           </div>
         </div>
 
@@ -95,7 +98,10 @@ export default function Home() {
               className="ml-2 bg-transparent outline-none text-gray-700 placeholder-gray-500 w-ful"
             />
           </div>
-          <button className="ml-3 px-4 py-2 bg-gray-100 rounded-full h-10 flex items-center">
+          <button
+            className="ml-3 px-4 py-2 bg-gray-100 rounded-full h-10 flex items-center"
+            onClick={() => setIsTableModalOpen(true)}
+          >
             <span className="text-green font-medium">Table</span>
             <span className="ml-2 text-green font-medium">5</span>
             <IoChevronForward className="ml-2 text-green" />
@@ -130,7 +136,7 @@ export default function Home() {
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className="bg-white w-full h-1/2 rounded-xl shadow-lg overflow-y-auto"
+            className="bg-white w-full h-1/2 rounded-t-xl shadow-lg overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 bg-white z-10 p-4 border-b">
@@ -139,7 +145,7 @@ export default function Home() {
                 <button
                   className="text-gray-500 hover:text-gray-800"
                   onClick={() => setIsModalOpen(false)}
-                />                  
+                />
               </div>
             </div>
             <div className="px-3 py-2 max-h-[70vh] overflow-y-auto">
@@ -155,6 +161,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      )}
+
+      {isTableModalOpen && (
+        <TableModal onClose={() => setIsTableModalOpen(false)} />
+
       )}
 
       {/* Content */}
