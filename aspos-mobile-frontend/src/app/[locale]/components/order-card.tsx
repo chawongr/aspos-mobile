@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import { FiMinusCircle,FiPlusCircle  } from "react-icons/fi";
+import { CiCircleMinus,CiCirclePlus } from "react-icons/ci";
 import { useTranslations } from 'next-intl';
 
 interface OrderCardProps {
@@ -12,7 +12,7 @@ interface OrderCardProps {
     status: string
 }
 
-export default function OrderCard({ imageUrl, title, description, price, quantity: initialQuantity, status }: OrderCardProps) {
+export default function OrderCard({ imageUrl, title, description, price, quantity: initialQuantity }: OrderCardProps) {
     const [quantity, setQuantity] = useState(initialQuantity);
     const [showModal, setShowModal] = useState(false);
 
@@ -63,14 +63,14 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
 
                 {/* Content-Right */}
                 <div className='flex justify-end items-end gap-1.5 md:gap-3'>
-                    <FiMinusCircle 
+                    <CiCircleMinus 
                         className='w-[25px] h-[25px] md:w-[34px] md:h-[34px] text-green'
                         onClick={handleDecrease} 
                     />
                     <div className="flex items-center justify-center w-[22px] h-[22px] md:w-[28px] md:h-[28px] rounded-full text-base md:text-xl font-semibold text-darkGray">
                         {quantity}
                     </div>
-                    <FiPlusCircle 
+                    <CiCirclePlus 
                         className='w-[25px] h-[25px] md:w-[34px] md:h-[34px] text-green'
                         onClick={handleIncrease} 
                     />
@@ -80,18 +80,18 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
             {/* Modal */}
             {showModal && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="bg-white p-6 rounded-lg shadow-lg text-darkGray ">
+                    <div className="bg-white p-6 rounded-xl shadow-lg text-darkGray">
                         <h2 className="text-lg md:text-2xl font-bold mb-4">{t('title')}</h2>
                         <p className="text-sm md:text-lg mb-6">{t('description')}</p>
-                        <div className="flex justify-end gap-3">
+                        <div className="flex justify-end gap-2 md:gap-3">
                             <button 
-                                className="px-4 py-2 flex justify-center bg-gray-300 rounded-md hover:bg-gray-400 md:text-lg" 
+                                className="px-4 py-2 flex justify-center bg-green text-white rounded-2xl md:text-lg w-[70px] md:w-20" 
                                 onClick={handleCloseModal}
                             >
                                 {t('cancleBtn')}
                             </button>
                             <button 
-                                className="px-4 py-2 flex justify-center bg-red-500 text-white rounded-md hover:bg-red-600 md:text-lg" 
+                                className="px-4 py-2 flex justify-center bg-lightBg text-green rounded-2xl md:text-lg w-[70px] md:w-20" 
                                 onClick={handleDeleteConfirm}
                             >
                                 {t('deleteBtn')}

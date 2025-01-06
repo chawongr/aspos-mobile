@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 import OrderData from '../../datas/order.json';
 import { CiViewList } from "react-icons/ci";
 import Link from 'next/link';
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
 
 interface Order{
@@ -74,10 +74,12 @@ export default function OrderListAll() {
           <div>{totalAmount.amount} {t('order')}</div>
           <div>฿{totalAmount.price}</div>
         </div>
-        <button className="py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-center">
-          <CiViewList className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3"/> 
-          {t('button')}
-        </button>
+        <Link href={`/${lang}/bills`}>
+          <button className="py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-center">
+            <CiViewList className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3"/> 
+            {t('button')}
+          </button>
+        </Link>
       </footer>
     </div>
   );
