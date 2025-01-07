@@ -14,6 +14,7 @@ import Link from 'next/link';
 import LocalSwitcher from './components/local-switcher';
 import { usePathname } from "next/navigation";
 import TableModal from './components/table-modal';
+import WaiterModal from './components/waiter-modal';
 import { useBasket } from './components/context/basket-context';
 import { SlBasket } from "react-icons/sl";
 
@@ -43,6 +44,8 @@ export default function Home() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTableModalOpen, setIsTableModalOpen] = useState(false);
+  const [isWaiterModalOpen, setIsWaiterModalOpen] = useState(false);
+
 
 
   const handleTabClick = (categoryId: number) => {
@@ -69,7 +72,10 @@ export default function Home() {
             <div className="text-sm md:text-lg text-gray-600 mt-1">{MenuPage('subtitle')}</div>
           </div>
           <div className="flex items-end mt-4 gap-x-5 md:gap-x-7">
-            <div className="w-[24px] h-[24px] md:w-[36px] md:h-[36px] bg-red-500ป">
+            <div 
+              className="w-[24px] h-[24px] md:w-[36px] md:h-[36px]"
+              onClick={() => setIsWaiterModalOpen(true)}
+            >
               <Image
                 src={Bell}
                 alt="Bell Icon"
@@ -107,7 +113,7 @@ export default function Home() {
             className="ml-3 px-4 py-2 bg-gray-100 rounded-full h-10 flex items-center"
             onClick={() => setIsTableModalOpen(true)}
           >
-            <span className="text-green font-medium">Table</span>
+            <span className="text-green font-medium">{MenuPage('table')}</span>
             <span className="ml-2 text-green font-medium">5</span>
             <IoChevronForward className="ml-2 text-green" />
           </button>
@@ -146,7 +152,7 @@ export default function Home() {
           >
             <div className="sticky top-0 bg-white z-10 p-4 border-b">
               <div className="flex justify-between items-center">
-                <h2 className="text-xl font-bold">Categories</h2>
+                <h2 className="text-lg md:text-2xl font-bold">Categories</h2>
                 <button
                   className="text-gray-500 hover:text-gray-800"
                   onClick={() => setIsModalOpen(false)}
@@ -157,7 +163,7 @@ export default function Home() {
               {Categories.map((category) => (
                 <button
                   key={category.id}
-                  className="block w-full text-left py-2 px-4 hover:bg-gray-100 rounded-lg"
+                  className="block w-full text-left text-lg py-2 px-4 hover:bg-gray-100 rounded-lg"
                   onClick={() => handleTabClick(category.id)}
                 >
                   {category.name}
@@ -171,6 +177,10 @@ export default function Home() {
       {isTableModalOpen && (
         <TableModal onClose={() => setIsTableModalOpen(false)} />
 
+      )}
+
+      {isWaiterModalOpen && (
+        <WaiterModal onClose={() => setIsWaiterModalOpen(false)}/>
       )}
 
       {/* Content */}
