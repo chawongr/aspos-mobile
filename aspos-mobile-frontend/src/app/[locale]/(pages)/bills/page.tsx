@@ -116,12 +116,14 @@ export default function Bills() {
             <h2 className="text-lg md:text-2xl font-bold mb-4">{t('titleModal')}</h2>
             <p className="text-sm md:text-lg mb-6">{t('descriptionModal')}</p>
             <div className="flex justify-end">
-              <button
+            <Link href={`/${lang}/success`}>
+            <button
                 className="px-4 py-2 flex justify-center bg-green text-white rounded-2xl md:text-lg w-20 md:w-24"
                 onClick={handleConfirm}
               >
                 {t('buttonModal')}
               </button>
+              </Link>
             </div>
           </div>
         </div>
