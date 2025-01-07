@@ -8,8 +8,7 @@
       "description": "Infotmation at the time ",
       "order": "Order(s)",
       "button":"Sent Order(s)"
-    }
-    ,
+    },
     "OrderAllPage": {
       "title": "Order List All",
       "description": "Infotmation at the time ",
@@ -22,9 +21,23 @@
       "cancleBtn": "Cancel",
       "deleteBtn":"Delete"
     },
+    "BillPage": {
+      "title": "Bill",
+      "table": "Table",
+      "order": "Items",
+      "button":"Pay with Waiter",
+      "price": "price",
+      "totalPrice":"Total Price",
+      "titleModal":"Request Bill Successful",
+      "descriptionModal":"Our staff will contact you shortly.",
+      "buttonModal":"Confirm"
+    },
     "TableModal":{
         "branch": "Branch",
         "shareqr": "Share QR to friends",
         "scanqr": "Just have your friend scan the QR code"
     }
   }
+
+
+
