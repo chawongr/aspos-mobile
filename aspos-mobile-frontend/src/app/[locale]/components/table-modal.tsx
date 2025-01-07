@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaUser } from "react-icons/fa";
 import { useTranslations } from 'next-intl';
-import { IoChevronForward } from 'react-icons/io5';
 import { Qr } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 
