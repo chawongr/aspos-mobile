@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 interface OrderCardProps {
     imageUrl: string | StaticImageData; // Accept both string and StaticImageData
     title: string;
-    description: string;
+    description?: string;
     price: number;
     quantity: number;
     status: string

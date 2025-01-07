@@ -14,13 +14,16 @@ import Link from 'next/link';
 import LocalSwitcher from './components/local-switcher';
 import { usePathname } from "next/navigation";
 import TableModal from './components/table-modal';
+import { useBasket } from './components/context/basket-context';
+import { SlBasket } from "react-icons/sl";
+
 
 interface MenuItem {
   id: number;
   name: string;
   description: string;
   price: number;
-  quantity: number;
+  quantity?: number;
 }
 
 interface Category {
@@ -32,6 +35,8 @@ interface Category {
 export default function Home() {
   const MenuPage = useTranslations('MenuPage');
   const Categories: Category[] = CategoriesData.category;
+  const { basket } = useBasket();
+
 
   const path = usePathname().substring(1);
 
@@ -174,26 +179,50 @@ export default function Home() {
           <div key={category.id} id={`category-${category.id}`} className="mb-4">
             <h2 className="text-xl font-semibold mb-1">{category.name}</h2>
             <div>
-              {category.menu.map((menuItem,index) => (
-                <Link href={`${path}/condiments/${menuItem.id}`} key={menuItem.id}>
-                  <div
-                  key={menuItem.id}
-                  className={`${index !== category.menu.length - 1 ? 'border-b-[0.5px] border-borderGray' : ''}`}
-                >
-                  <MenuCard
-                    imageUrl={Food1}
-                    title={menuItem.name}
-                    description={menuItem.description}
-                    price={menuItem.price}
-                    quantity={menuItem.quantity}
-                  />
-                </div>
-                </Link>
-              ))}
+              {category.menu.map((menuItem, index) => {
+                const basketItem = basket.find((item) => item.id === menuItem.id);
+                const basketQuantity = basketItem ? basketItem.quantity : 0;
+
+                return (
+                  <Link href={`${path}/condiments/${menuItem.id}`} key={menuItem.id}>
+                    <div
+                      key={menuItem.id}
+                      className={`${index !== category.menu.length - 1 ? 'border-b-[0.5px] border-borderGray' : ''}`}
+                    >
+                      <MenuCard
+                        imageUrl={Food1}
+                        title={menuItem.name}
+                        description={menuItem.description}
+                        price={menuItem.price}
+                        quantity={basketQuantity}
+                      />
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         ))}
       </div>
+
+      {basket.length > 0 && (
+        <Link href={`${path}/order-list`}>
+          <footer className="sticky bottom-5 w-full py-4 px-5 text-white bg-green rounded-full ">
+            <div className="flex justify-between items-center">
+              <div className='flex'>
+                <div><SlBasket className='h-5 w-5 mr-2' /></div>
+                <div className="text-lg font-medium">
+                  {basket.reduce((total, item) => total + item.quantity, 0)} Items
+                </div>
+              </div>
+              <div className="text-lg font-semibold">
+                ฿{basket.reduce((total, item) => total + item.price, 0).toLocaleString()}
+              </div>
+            </div>
+          </footer>
+        </Link>
+
+      )}
 
     </div>
   );
