@@ -10,6 +10,10 @@ import { useState } from 'react';
 import { SlBasket } from 'react-icons/sl';
 import { useRouter } from "next/navigation";
 import { IoIosArrowBack } from "react-icons/io";
+import { useBasket } from '@/app/[locale]/components/context/basket-context';
+import Link from 'next/link';
+import { usePathname } from "next/navigation";
+
 
 
 interface MenuItem {
@@ -17,7 +21,7 @@ interface MenuItem {
   name: string;
   description: string;
   price: number;
-  quantity: number;
+  quantity?: number;
   condiments?: string[];
 }
 
@@ -25,6 +29,8 @@ export default function MenuItemDetail() {
   const params = useParams() as { itemId: string }; // Use proper typing for params
   const itemId = params.itemId;
   const [quantities, setQuantities] = useState<{ [key: number]: number }>({});
+  const path = usePathname()[0];
+
 
   const menuItemId = parseInt(itemId, 10);
 
@@ -54,15 +60,28 @@ export default function MenuItemDetail() {
   const currentQuantity = quantities[menuItem.id] || 1;
   const router = useRouter();
 
+  const { addToBasket } = useBasket();
+
+
+  const handleAddToBasket = () => {
+    addToBasket({
+      id: menuItem.id,
+      name: menuItem.name,
+      price: menuItem.price * currentQuantity,
+      quantity: currentQuantity,
+      description: menuItem.description
+    });
+  };
+
   return (
     <div>
       <button
-                onClick={() => router.back()} // Navigate back to the previous page
-                className="absolute text-green font-semibold p-1 text-xl  rounded-full bg-gray-100 ml-1 mt-1"
-            >
-                <IoIosArrowBack />
+        onClick={() => router.back()} // Navigate back to the previous page
+        className="absolute text-green font-semibold p-1 text-xl  rounded-full bg-gray-100 ml-1 mt-1"
+      >
+        <IoIosArrowBack />
 
-            </button>
+      </button>
       <div>
         <Image
           src={Food1}
@@ -74,7 +93,7 @@ export default function MenuItemDetail() {
         <div className="text-lg font-bold text-green">{menuItem.name}</div>
         <div>{menuItem.description}</div>
       </div>
-      <div className="border-y-[0.5px] border-borderGray">
+      <div className="">
         <AccordionCondiment />
       </div>
       <div className="py-5">
@@ -86,11 +105,12 @@ export default function MenuItemDetail() {
           required
         ></textarea>
       </div>
-      <footer className="sticky bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
+
+      <footer className="absolute bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
         <div className="flex justify-between text-lg md:text-2xl font-medium">
           <div className="flex justify-end items-center gap-1.5 md:gap-3">
             <CiCircleMinus
-              className={`w-[25px] h-[25px] md:w-[34px] md:h-[34px] ${currentQuantity <= 1 ? 'text-lightBg' : 'text-green'
+              className={`w-[25px] h-[25px] md:w-[34px] md:h-[34px] ${currentQuantity <= 1 ? 'text-gray-300' : 'text-green'
                 } cursor-pointer`}
               onClick={() => handleDecrease(menuItem.id)}
             />
@@ -104,16 +124,18 @@ export default function MenuItemDetail() {
             />
           </div>
           <div className="w-full ml-5">
-            <button className="px-5 py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-between">
-              <div className="flex">
-                <SlBasket className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" />
-                <div>Add to basket</div>
-              </div>
-              <div>฿{menuItem.price * currentQuantity}</div>
-            </button>
+            <Link href={`${path}`} >
+              <button onClick={handleAddToBasket} className="px-5 py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-between">
+                <div className="flex">
+                  <div>Add to basket</div>
+                </div>
+                <div>฿{menuItem.price * currentQuantity}</div>
+              </button>
+            </Link>
           </div>
         </div>
       </footer>
     </div>
   );
 }
+

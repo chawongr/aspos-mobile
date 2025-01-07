@@ -10,71 +10,62 @@
                     "name": "Coffee",
                     "description": "Freshly brewed coffee with a rich aroma.",
                     "price":70,
-                    "quantity": 9,
                     "condiments": ["Sugar", "Cream"]
                 },
                 {
                     "id": 2,
                     "name": "Tea",
                     "description": "A soothing cup of tea in various flavors.",
-                    "price": 2.49,
-                    "quantity": 8
+                    "price": 49,
+                    "condiments": ["Sugar"]
                 },
                 {
                     "id": 3,
                     "name": "Smoothie",
                     "description": "A refreshing fruit smoothie made to order.",
-                    "price": 4.99,
-                    "quantity": 7
+                    "price": 99
                 },
                 {
                     "id": 4,
                     "name": "Latte",
                     "description": "A creamy latte with steamed milk.",
-                    "price": 3.49,
-                    "quantity": 6
+                    "price": 39
                 },
                 {
                     "id": 5,
                     "name": "Espresso",
                     "description": "Strong and bold espresso shots.",
-                    "price": 2.99,
-                    "quantity": 5
+                    "price": 99
                 },
                 {
                     "id": 6,
                     "name": "Cappuccino",
                     "description": "A frothy cappuccino with milk foam.",
-                    "price": 3.79,
-                    "quantity": 4
+                    "price": 79
                 },
                 {
                     "id": 7,
                     "name": "Hot Chocolate",
                     "description": "Rich and creamy hot chocolate.",
-                    "price": 3.29,
-                    "quantity": 3
+                    "price": 99
                 },
                 {
                     "id": 8,
                     "name": "Iced Coffee",
                     "description": "Chilled coffee served over ice.",
-                    "price": 3.49,
-                    "quantity": 2
+                    "price": 49
                 },
                 {
                     "id": 9,
                     "name": "Iced Tea",
                     "description": "Refreshing iced tea with lemon.",
-                    "price": 2.79,
-                    "quantity": 1
+                    "price": 79
                 },
                 {
                     "id": 10,
                     "name": "Milkshake",
-                    "description": "Thick and creamy milkshake.",
-                    "price": 4.49,
-                    "quantity": 9
+                    "description": "Thick and creamy milkshake  ",
+                    "price": 49
                 }
             ]
         },
@@ -85,72 +76,62 @@
                 {
                     "id": 11,
                     "name": "Grilled Chicken",
-                    "description": "Succulent grilled chicken with herbs.",
-                    "price": 12.99,
-                    "quantity": 8
+                    "description": "Succulent grilled chicken with herbs  ",
+                    "price": 199
                 },
                 {
                     "id": 12,
                     "name": "Pasta",
-                    "description": "Creamy Alfredo pasta with garlic bread.",
-                    "price": 10.99,
-                    "quantity": 7
+                    "description": "Creamy Alfredo pasta with garlic bread  ",
+                    "price": 199
                 },
                 {
                     "id": 13,
                     "name": "Veggie Burger",
-                    "description": "A wholesome veggie patty with fresh toppings.",
-                    "price": 9.99,
-                    "quantity": 6
+                    "description": "A wholesome veggie patty with fresh toppings  ",
+                    "price": 99
                 },
                 {
                     "id": 14,
                     "name": "Steak",
-                    "description": "Juicy steak cooked to perfection.",
-                    "price": 15.99,
-                    "quantity": 5
+                    "description": "Juicy steak cooked to perfection  ",
+                    "price": 159
                 },
                 {
                     "id": 15,
                     "name": "Salmon",
-                    "description": "Grilled salmon with lemon butter sauce.",
-                    "price": 14.99,
-                    "quantity": 4
+                    "description": "Grilled salmon with lemon butter sauce  ",
+                    "price": 149
                 },
                 {
                     "id": 16,
                     "name": "Chicken Curry",
-                    "description": "Spicy and flavorful chicken curry.",
-                    "price": 11.99,
-                    "quantity": 3
+                    "description": "Spicy and flavorful chicken curry  ",
+                    "price": 119
                 },
                 {
                     "id": 17,
                     "name": "Beef Stir-Fry",
-                    "description": "Tender beef with stir-fried vegetables.",
-                    "price": 13.49,
-                    "quantity": 2
+                    "description": "Tender beef with stir-fried vegetables  ",
+                    "price": 139
                 },
                 {
                     "id": 18,
                     "name": "Vegetable Lasagna",
-                    "description": "Layers of pasta with vegetables and cheese.",
-                    "price": 10.49,
-                    "quantity": 1
+                    "description": "Layers of pasta with vegetables and cheese  ",
+                    "price": 109
                 },
                 {
                     "id": 19,
                     "name": "Shrimp Tacos",
-                    "description": "Tacos filled with spicy shrimp and slaw.",
-                    "price": 12.49,
-                    "quantity": 9
+                    "description": "Tacos filled with spicy shrimp and slaw  ",
+                    "price": 129
                 },
                 {
                     "id": 20,
                     "name": "Pizza",
-                    "description": "Stone-baked pizza with your choice of toppings.",
-                    "price": 11.99,
-                    "quantity": 8
+                    "description": "Stone-baked pizza with your choice of toppings  ",
+                    "price": 199
                 }
             ]
         },
@@ -162,71 +143,61 @@
                     "id": 21,
                     "name": "Chocolate Cake",
                     "description": "Rich and moist chocolate cake.",
-                    "price": 5.99,
-                    "quantity": 7
+                    "price": 59
                 },
                 {
                     "id": 22,
                     "name": "Ice Cream",
                     "description": "Delicious ice cream with assorted flavors.",
-                    "price": 3.99,
-                    "quantity": 6
+                    "price": 39
                 },
                 {
                     "id": 23,
                     "name": "Fruit Tart",
                     "description": "A crisp tart filled with fresh fruits.",
-                    "price": 4.49,
-                    "quantity": 5
+                    "price": 49
                 },
                 {
                     "id": 24,
                     "name": "Brownie",
                     "description": "Decadent chocolate brownie.",
-                    "price": 3.99,
-                    "quantity": 4
+                    "price": 39
                 },
                 {
                     "id": 25,
                     "name": "Cheesecake",
                     "description": "Classic New York-style cheesecake.",
-                    "price": 5.49,
-                    "quantity": 3
+                    "price": 59
                 },
                 {
                     "id": 26,
                     "name": "Cupcake",
                     "description": "Moist cupcake with creamy frosting.",
-                    "price": 2.99,
-                    "quantity": 2
+                    "price": 29
                 },
                 {
                     "id": 27,
                     "name": "Pudding",
                     "description": "Smooth and creamy pudding.",
-                    "price": 3.49,
-                    "quantity": 1
+                    "price": 39
                 },
                 {
                     "id": 28,
                     "name": "Macarons",
                     "description": "Delicate French macarons in various flavors.",
-                    "price": 6.49,
-                    "quantity": 9
+                    "price": 69
                 },
                 {
                     "id": 29,
                     "name": "Donuts",
                     "description": "Freshly baked donuts with glaze.",
-                    "price": 2.99,
-                    "quantity": 8
+                    "price": 29
                 },
                 {
                     "id": 30,
                     "name": "Apple Pie",
                     "description": "Warm apple pie with a hint of cinnamon.",
-                    "price": 4.99,
-                    "quantity": 7
+                    "price": 49
                 }
             ]
         },
@@ -238,71 +209,61 @@
                     "id": 31,
                     "name": "Spring Rolls",
                     "description": "Crispy rolls with a savory filling.",
-                    "price": 6.99,
-                    "quantity": 6
+                    "price": 6.99
                 },
                 {
                     "id": 32,
                     "name": "Garlic Bread",
                     "description": "Fresh bread with garlic butter.",
-                    "price": 4.99,
-                    "quantity": 5
+                    "price": 4.99
                 },
                 {
                     "id": 33,
                     "name": "Bruschetta",
                     "description": "Toasted bread with tomato topping.",
-                    "price": 5.49,
-                    "quantity": 4
+                    "price": 5.49
                 },
                 {
                     "id": 34,
                     "name": "Chicken Wings",
                     "description": "Spicy wings served with dip.",
-                    "price": 8.49,
-                    "quantity": 3
+                    "price": 8.49
                 },
                 {
                     "id": 35,
                     "name": "Nachos",
                     "description": "Loaded nachos with cheese and jalapeños.",
-                    "price": 7.99,
-                    "quantity": 2
+                    "price": 799
                 },
                 {
                     "id": 36,
                     "name": "Stuffed Mushrooms",
                     "description": "Mushrooms stuffed with cheese and herbs.",
-                    "price": 6.49,
-                    "quantity": 1
+                    "price": 649
                 },
                 {
                     "id": 37,
                     "name": "Mozzarella Sticks",
                     "description": "Fried mozzarella with marinara sauce.",
-                    "price": 7.49,
-                    "quantity": 9
+                    "price": 749
                 },
                 {
                     "id": 38,
                     "name": "Potato Skins",
                     "description": "Loaded potato skins with toppings.",
-                    "price": 6.99,
-                    "quantity": 8
+                    "price": 6.9
                 },
                 {
                     "id": 39,
                     "name": "Hummus Platter",
                     "description": "Hummus served with pita bread.",
-                    "price": 5.99,
-                    "quantity": 7
+                    "price": 599
                 },
                 {
                     "id": 40,
                     "name": "Onion Rings",
                     "description": "Crispy onion rings with dip.",
-                    "price": 4.99,
-                    "quantity": 6
+                    "price": 499
                 }
             ]
         },
@@ -314,71 +275,61 @@
                     "id": 41,
                     "name": "Caesar Salad",
                     "description": "Crisp romaine with Caesar dressing.",
-                    "price": 7.99,
-                    "quantity": 5
+                    "price": 7.99
                 },
                 {
                     "id": 42,
                     "name": "Greek Salad",
                     "description": "Fresh veggies with feta and olives.",
-                    "price": 8.49,
-                    "quantity": 4
+                    "price": 8.49
                 },
                 {
                     "id": 43,
                     "name": "Cobb Salad",
                     "description": "Mixed greens with chicken and avocado.",
-                    "price": 9.99,
-                    "quantity": 3
+                    "price": 9.99
                 },
                 {
                     "id": 44,
                     "name": "Spinach Salad",
                     "description": "Spinach with strawberries and nuts.",
-                    "price": 7.49,
-                    "quantity": 2
+                    "price": 7.49
                 },
                 {
                     "id": 45,
                     "name": "Pasta Salad",
                     "description": "Cold pasta with veggies and dressing.",
-                    "price": 6.99,
-                    "quantity": 1
+                    "price": 6.99
                 },
                 {
                     "id": 46,
                     "name": "Fruit Salad",
                     "description": "A mix of fresh seasonal fruits.",
-                    "price": 5.99,
-                    "quantity": 9
+                    "price": 5.99
                 },
                 {
                     "id": 47,
                     "name": "Kale Salad",
                     "description": "Kale with lemon dressing and nuts.",
-                    "price": 7.49,
-                    "quantity": 8
+                    "price": 7.49
                 },
                 {
                     "id": 48,
                     "name": "Quinoa Salad",
                     "description": "Quinoa with veggies and feta.",
-                    "price": 8.99,
-                    "quantity": 7
+                    "price": 8.99
                 },
                 {
                     "id": 49,
                     "name": "Chicken Salad",
                     "description": "Chicken with lettuce and dressing.",
-                    "price": 9.49,
-                    "quantity": 6
+                    "price": 9.49
                 },
                 {
                     "id": 50,
                     "name": "Asian Salad",
                     "description": "Mixed greens with an Asian twist.",
-                    "price": 8.49,
-                    "quantity": 5
+                    "price": 8.49
                 }
             ]
         },
@@ -390,71 +341,61 @@
                     "id": 51,
                     "name": "BLT Sandwich",
                     "description": "Bacon, lettuce, and tomato sandwich.",
-                    "price": 6.99,
-                    "quantity": 4
+                    "price": 6.99
                 },
                 {
                     "id": 52,
                     "name": "Grilled Cheese",
                     "description": "Melted cheese between toasted bread.",
-                    "price": 5.49,
-                    "quantity": 3
+                    "price": 5.49
                 },
                 {
                     "id": 53,
                     "name": "Club Sandwich",
                     "description": "Triple-layer sandwich with fillings.",
-                    "price": 7.99,
-                    "quantity": 2
+                    "price": 7.99
                 },
                 {
                     "id": 54,
                     "name": "Chicken Sandwich",
                     "description": "Grilled chicken sandwich.",
-                    "price": 8.49,
-                    "quantity": 1
+                    "price": 8.49
                 },
                 {
                     "id": 55,
                     "name": "Tuna Sandwich",
                     "description": "Tuna salad sandwich.",
-                    "price": 6.99,
-                    "quantity": 9
+                    "price": 6.99
                 },
                 {
                     "id": 56,
                     "name": "Veggie Sandwich",
                     "description": "Fresh veggies in multigrain bread.",
-                    "price": 5.99,
-                    "quantity": 8
+                    "price": 5.99
                 },
                 {
                     "id": 57,
                     "name": "Turkey Sandwich",
                     "description": "Turkey with lettuce and mayo.",
-                    "price": 7.49,
-                    "quantity": 7
+                    "price": 7.49
                 },
                 {
                     "id": 58,
                     "name": "Ham Sandwich",
                     "description": "Ham and cheese sandwich.",
-                    "price": 6.49,
-                    "quantity": 6
+                    "price": 6.49
                 },
                 {
                     "id": 59,
                     "name": "Egg Salad Sandwich",
                     "description": "Egg salad on toasted bread.",
-                    "price": 5.99,
-                    "quantity": 5
+                    "price": 5.99
                 },
                 {
                     "id": 60,
                     "name": "Meatball Sub",
                     "description": "Sub with meatballs and marinara.",
-                    "price": 8.99,
-                    "quantity": 4
+                    "price": 8.99
                 }
             ]
         },
@@ -466,22 +407,19 @@
                     "id": 61,
                     "name": "Pancakes",
                     "description": "Fluffy pancakes with syrup.",
-                    "price": 5.99,
-                    "quantity": 3
+                    "price": 5.99
                 },
                 {
                     "id": 62,
                     "name": "Waffles",
                     "description": "Crispy waffles with toppings.",
-                    "price": 6.49,
-                    "quantity": 2
+                    "price": 6.49
                 },
                 {
                     "id": 63,
                     "name": "Omelette",
                     "description": "Custom-made omelette with fillings.",
-                    "price": 7.49,
-                    "quantity": 1
+                    "price": 7.49
                 }
             ]
         },
@@ -493,71 +431,61 @@
                     "id": 71,
                     "name": "Lobster",
                     "description": "Grilled lobster with garlic butter.",
-                    "price": 24.99,
-                    "quantity": 2
+                    "price": 24.99
                 },
                 {
                     "id": 72,
                     "name": "Crab Cakes",
                     "description": "Fresh crab cakes with tartar sauce.",
-                    "price": 12.99,
-                    "quantity": 3
+                    "price": 12.99
                 },
                 {
                     "id": 73,
                     "name": "Grilled Salmon",
                     "description": "Salmon fillet grilled to perfection.",
-                    "price": 15.99,
-                    "quantity": 4
+                    "price": 15.99
                 },
                 {
                     "id": 74,
                     "name": "Shrimp Scampi",
                     "description": "Shrimp cooked in a garlic butter sauce.",
-                    "price": 13.99,
-                    "quantity": 5
+                    "price": 13.99
                 },
                 {
                     "id": 75,
                     "name": "Oysters",
                     "description": "Fresh oysters on the half shell.",
-                    "price": 19.99,
-                    "quantity": 6
+                    "price": 19.99
                 },
                 {
                     "id": 76,
                     "name": "Fish Tacos",
                     "description": "Tacos filled with seasoned fish.",
-                    "price": 9.99,
-                    "quantity": 7
+                    "price": 9.99
                 },
                 {
                     "id": 77,
                     "name": "Clam Chowder",
                     "description": "Creamy clam chowder soup.",
-                    "price": 7.99,
-                    "quantity": 8
+                    "price": 7.99
                 },
                 {
                     "id": 78,
                     "name": "Calamari",
                     "description": "Fried squid served with marinara.",
-                    "price": 11.99,
-                    "quantity": 9
+                    "price": 11.99
                 },
                 {
                     "id": 79,
                     "name": "Tuna Steak",
                     "description": "Seared tuna steak.",
-                    "price": 17.99,
-                    "quantity": 3
+                    "price": 17.99
                 },
                 {
                     "id": 80,
                     "name": "Paella",
                     "description": "Traditional Spanish seafood paella.",
-                    "price": 20.99,
-                    "quantity": 2
+                    "price": 20.99
                 }
             ]
         },
@@ -569,36 +497,31 @@
                     "id": 81,
                     "name": "Tomato Soup",
                     "description": "Creamy tomato soup served with bread.",
-                    "price": 4.99,
-                    "quantity": 6
+                    "price": 4.99
                 },
                 {
                     "id": 82,
                     "name": "Chicken Noodle Soup",
                     "description": "Classic chicken noodle soup.",
-                    "price": 5.49,
-                    "quantity": 5
+                    "price": 5.49
                 },
                 {
                     "id": 83,
                     "name": "Minestrone",
                     "description": "Italian vegetable soup with pasta.",
-                    "price": 6.49,
-                    "quantity": 4
+                    "price": 6.49
                 },
                 {
                     "id": 84,
                     "name": "French Onion Soup",
                     "description": "Rich onion soup topped with cheese.",
-                    "price": 7.49,
-                    "quantity": 3
+                    "price": 7.49
                 },
                 {
                     "id": 85,
                     "name": "Butternut Squash Soup",
                     "description": "Creamy squash soup with spices.",
-                    "price": 6.99,
-                    "quantity": 2
+                    "price": 6.99
                 }
             ]
         }
