@@ -174,8 +174,9 @@ export default function Home() {
           <div key={category.id} id={`category-${category.id}`} className="mb-4">
             <h2 className="text-xl font-semibold mb-1">{category.name}</h2>
             <div>
-              {category.menu.map((menuItem, index) => (
-                <div
+              {category.menu.map((menuItem,index) => (
+                <Link href={`${path}/condiments/${menuItem.id}`} key={menuItem.id}>
+                  <div
                   key={menuItem.id}
                   className={`${index !== category.menu.length - 1 ? 'border-b-[0.5px] border-borderGray' : ''}`}
                 >
@@ -187,12 +188,13 @@ export default function Home() {
                     quantity={menuItem.quantity}
                   />
                 </div>
+                </Link>
               ))}
             </div>
           </div>
         ))}
       </div>
+
     </div>
   );
 }
-

@@ -82,7 +82,7 @@ const TableModal: React.FC<TableModalProps> = ({ onClose }) => {
           <div className="bg-lightBg rounded-lg mt-3 p-4">
             <div className="flex justify-between">
               <div className="font-bold text-base">Buffet</div>
-              <div className="font-semibold">15.00 - 16.45</div>
+              <div className="font-semibold">19.00 - 20.45</div>
             </div>
             <div className="flex justify-between mt-2">
               <div className="flex">
