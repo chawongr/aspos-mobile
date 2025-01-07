@@ -9,7 +9,7 @@ import { ThFlag, EnFlag } from '@/app/[locale]/components/all-image';
 
 
 export default function LocaleSwitcher() {
-    const [isPending, startTransition] = useTransition();
+    const [, startTransition] = useTransition();
     const router = useRouter();
     const localActive = useLocale();
     const path = usePathname().substring(3);

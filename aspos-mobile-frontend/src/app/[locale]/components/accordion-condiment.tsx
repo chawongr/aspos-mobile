@@ -105,20 +105,20 @@ import { usePathname } from "next/navigation";
 import CategoriesData from "@/app/[locale]/datas/menu.json";
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 
-interface MenuItem {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    quantity?: number;
-    condiments?: string[];
-}
+// interface MenuItem {
+//     id: number;
+//     name: string;
+//     description: string;
+//     price: number;
+//     quantity?: number;
+//     condiments?: string[];
+// }
 
-interface Category {
-    id: number;
-    name: string;
-    menu: MenuItem[];
-}
+// interface Category {
+//     id: number;
+//     name: string;
+//     menu: MenuItem[];
+// }
 
 export default function Accordion() {
     const [isOpen, setIsOpen] = useState(true);
