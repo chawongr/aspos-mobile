@@ -25,7 +25,7 @@ const WaiterModal: React.FC<WaiterModalProps> = ({ onClose }) => {
             <div className="text-base md:text-xl font-normal">{t('description')}</div>
           </div>
           <div className="p-6 md:p-12">
-            <div className="grid grid-cols-2 gap-4 md:gap-8">
+            <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-[500px] mx-auto">
               <div className="aspect-square rounded-xl md:rounded-2xl flex flex-col justify-center items-center text-base md:text-xl font-normal shadow-md border border-lightBg gap-2 md:gap-3">
                 <Image
                   src={Cutlery}
