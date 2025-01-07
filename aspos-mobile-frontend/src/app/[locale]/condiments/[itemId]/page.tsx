@@ -1,18 +1,15 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter,usePathname } from 'next/navigation';
 import CategoriesData from '@/app/[locale]/datas/menu.json';
 import { Food1 } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 import AccordionCondiment from '../../components/accordion-condiment';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
 import { useState } from 'react';
-import { SlBasket } from 'react-icons/sl';
-import { useRouter } from "next/navigation";
 import { IoIosArrowBack } from "react-icons/io";
 import { useBasket } from '@/app/[locale]/components/context/basket-context';
 import Link from 'next/link';
-import { usePathname } from "next/navigation";
 
 
 
