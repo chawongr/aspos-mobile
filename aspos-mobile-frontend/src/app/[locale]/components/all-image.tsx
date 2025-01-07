@@ -7,6 +7,10 @@ import Food4 from '../../../../public/food4.jpg'
 import Bell from '../../../../public/bell.svg'
 import Bill from '../../../../public/bill.svg'
 import Qr from '../../../../public/qr.jpeg'
+import Cutlery from '../../../../public/cutlery.png'
+import Ketchup from '../../../../public/ketchup.png'
+import SoftDrink from '../../../../public/soft-drink.png'
+import Waiter from '../../../../public/waiter.png'
 
 export { 
     ThFlag,
@@ -17,5 +21,9 @@ export {
     Food4,
     Bell,
     Bill,
-    Qr
+    Qr,
+    Cutlery,
+    Ketchup,
+    SoftDrink,
+    Waiter
 }

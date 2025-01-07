@@ -88,13 +88,13 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
                                 className="px-4 py-2 flex justify-center bg-green text-white rounded-2xl md:text-lg w-[70px] md:w-20" 
                                 onClick={handleCloseModal}
                             >
-                                {t('cancleBtn')}
+                                {t('buttonCancel')}
                             </button>
                             <button 
                                 className="px-4 py-2 flex justify-center bg-lightBg text-green rounded-2xl md:text-lg w-[70px] md:w-20" 
                                 onClick={handleDeleteConfirm}
                             >
-                                {t('deleteBtn')}
+                                {t('buttonDelete')}
                             </button>
                         </div>
                     </div>

@@ -1,7 +1,8 @@
 {
     "MenuPage": {
       "title": "Hi",
-      "subtitle": "Hope you enjoy eating!"
+      "subtitle": "Hope you enjoy eating!",
+      "table": "Table"
     },
     "OrderPage": {
       "title": "Order List",
@@ -18,8 +19,8 @@
     "DeleteModal":{
       "title": "Confirm Deletion",
       "description": "Are you sure you want to delete this item?",
-      "cancleBtn": "Cancel",
-      "deleteBtn":"Delete"
+      "buttonCancel": "Cancel",
+      "buttonDelete":"Delete"
     },
     "BillPage": {
       "title": "Bill",
@@ -36,6 +37,14 @@
         "branch": "Branch",
         "shareqr": "Share QR to friends",
         "scanqr": "Just have your friend scan the QR code"
+    },
+    "WaiterModal": {
+        "title": "Call Waiter",
+        "description": "How can I assist you?",
+        "buttonLT": "Equipment",
+        "buttonRT": "Condiments",
+        "buttonLB": "Beverage",
+        "buttonRB": "Others"
     }
   }
 
