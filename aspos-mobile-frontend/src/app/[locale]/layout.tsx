@@ -38,9 +38,7 @@ export default async function LocaleLayout({
       <body className={`${noto.className} p-5 md:p-10 h-screen w-screen box-border text-sm text-darkGray`}
       >
         <NextIntlClientProvider messages={messages}>
-          {/* {children} */}
           <BasketProvider>{children}</BasketProvider>
-
         </NextIntlClientProvider>
       </body>
     </html>
