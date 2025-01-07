@@ -45,7 +45,6 @@
 //   );
 // }
 
-
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -67,10 +66,11 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>; // Update to match the expected Promise type
 }) {
-  // Ensure that the `params` object is resolved before accessing its properties
-  const { locale } = await Promise.resolve(params);
+  // Await the `params` object
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
 
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as Locale)) {
@@ -94,5 +94,3 @@ export default async function LocaleLayout({
     </html>
   );
 }
-
-
