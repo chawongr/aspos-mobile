@@ -1,0 +1,52 @@
+{
+    "MenuPage": {
+      "title": "Hi",
+      "subtitle": "Hope you enjoy eating!",
+      "table": "Table"
+    },
+    "OrderPage": {
+      "title": "Order List",
+      "description": "Infotmation at the time ",
+      "order": "Order(s)",
+      "button":"Sent Order(s)"
+    },
+    "OrderAllPage": {
+      "title": "Order List All",
+      "description": "Infotmation at the time ",
+      "order": "Order(s)",
+      "button":"Bill"
+    },
+    "DeleteModal":{
+      "title": "Confirm Deletion",
+      "description": "Are you sure you want to delete this item?",
+      "buttonCancel": "Cancel",
+      "buttonDelete":"Delete"
+    },
+    "BillPage": {
+      "title": "Bill",
+      "table": "Table",
+      "order": "Items",
+      "button":"Pay with Waiter",
+      "price": "price",
+      "totalPrice":"Total Price",
+      "titleModal":"Request Bill Successful",
+      "descriptionModal":"Our staff will contact you shortly.",
+      "buttonModal":"Confirm"
+    },
+    "TableModal":{
+        "branch": "Branch",
+        "shareqr": "Share QR to friends",
+        "scanqr": "Just have your friend scan the QR code"
+    },
+    "WaiterModal": {
+        "title": "Call Waiter",
+        "description": "How can I assist you?",
+        "buttonLT": "Equipment",
+        "buttonRT": "Condiments",
+        "buttonLB": "Beverage",
+        "buttonRB": "Others"
+    }
+  }
+
+
+
