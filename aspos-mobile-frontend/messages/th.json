@@ -1,35 +1,40 @@
 {
-   "MenuPage": {
-      "title": "สวัสดี",
-      "subtitle": "เพลิดเพลินไปกับมื้ออาหาร!"
+    "MenuPage": {
+        "title": "สวัสดี",
+        "subtitle": "เพลิดเพลินไปกับมื้ออาหาร!"
     },
     "OrderPage": {
-      "title": "รายการที่สั่ง",
-      "description": "ข้อมูล ณ เวลา ",
-      "order": "รายการ",
-      "button":"ส่งรายการ"
+        "title": "รายการที่สั่ง",
+        "description": "ข้อมูล ณ เวลา ",
+        "order": "รายการ",
+        "button": "ส่งรายการ"
     },
     "OrderAllPage": {
-      "title": "รายการที่สั่งทั้งหมด",
-      "description": "ข้อมูล ณ เวลา ",
-      "order": "รายการ",
-      "button":"บิลค่าาหาร"
+        "title": "รายการที่สั่งทั้งหมด",
+        "description": "ข้อมูล ณ เวลา ",
+        "order": "รายการ",
+        "button": "บิลค่าาหาร"
     },
-    "DeleteModal":{
-      "title": "ยืนยันการลบ",
-      "description": "คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?",
-      "cancleBtn": "ยกเลิก",
-      "deleteBtn":"ลบ"
+    "DeleteModal": {
+        "title": "ยืนยันการลบ",
+        "description": "คุณแน่ใจหรือไม่ว่าต้องการลบรายการนี้?",
+        "cancleBtn": "ยกเลิก",
+        "deleteBtn": "ลบ"
     },
     "BillPage": {
-      "title": "บิลค่าอาหาร",
-      "table": "โต๊ะ",
-      "order": "รายการที่สั่ง",
-      "button":"เรียกชำระเงิน",
-      "price": "ราคา",
-      "totalPrice":"ราคารวม",
-      "titleModal":"เรียกเก็บบิลค่าอาหารสำเร็จ",
-      "descriptionModal":"พนักงานของเรากำลังมาหาคุณ",
-      "buttonModal":"ยืนยัน"
+        "title": "บิลค่าอาหาร",
+        "table": "โต๊ะ",
+        "order": "รายการที่สั่ง",
+        "button": "เรียกชำระเงิน",
+        "price": "ราคา",
+        "totalPrice": "ราคารวม",
+        "titleModal": "เรียกเก็บบิลค่าอาหารสำเร็จ",
+        "descriptionModal": "พนักงานของเรากำลังมาหาคุณ",
+        "buttonModal": "ยืนยัน"
+    },
+    "TableModal": {
+        "branch": "สาขา",
+        "shareqr": "แชร์ QR ให้เพื่อน",
+        "scanqr": "เพียงให้เพื่อนสแกน QR Code"
     }
-  }
+}

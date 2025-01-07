@@ -9,8 +9,9 @@
                     "id": 1,
                     "name": "Coffee",
                     "description": "Freshly brewed coffee with a rich aroma.",
-                    "price": 2.99,
-                    "quantity": 9
+                    "price":70,
+                    "quantity": 9,
+                    "condiments": ["Sugar", "Cream"]
                 },
                 {
                     "id": 2,

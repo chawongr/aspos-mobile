@@ -31,5 +31,13 @@
       "titleModal":"Request Bill Successful",
       "descriptionModal":"Our staff will contact you shortly.",
       "buttonModal":"Confirm"
+    },
+    "TableModal":{
+        "branch": "Branch",
+        "shareqr": "Share QR to friends",
+        "scanqr": "Just have your friend scan the QR code"
     }
   }
+
+
+
