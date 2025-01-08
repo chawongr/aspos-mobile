@@ -10,6 +10,7 @@ import { useTranslations } from 'next-intl';
 import { useBasket } from '@/app/[locale]/components/context/basket-context';
 import { Food2 } from '@/app/[locale]/components/all-image'
 import { useAllList } from '@/app/[locale]/components/context/all-list-context';
+import { v4 as uuidv4 } from 'uuid';
 
 
 export default function OrderList() {
@@ -41,6 +42,7 @@ export default function OrderList() {
       ...item,
       description: item.description || "", 
       status: 'Pending', 
+      uniqueKey: uuidv4(),
     }));
     addToAllList(allListData);
     clearBasket();

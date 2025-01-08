@@ -56,7 +56,7 @@ export default function OrderListAll() {
       <div className="flex-1 overflow-y-auto">
         {allList.map((order, index) => (
           <div
-            key={order.id}
+            key={order.uniqueKey}
             className={`${index !== allList.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}
           >
             <OrderAllCard
