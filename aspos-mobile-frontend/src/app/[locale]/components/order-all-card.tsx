@@ -31,7 +31,7 @@ export default function OrderAllCard({ imageUrl, title, description, price, quan
                 alt={title}
                 width={500}
                 height={500}
-                className="rounded-lg object-cover w-full h-full"
+                className="rounded-lg object-contain w-full h-full"
                 />
             </div>
 
