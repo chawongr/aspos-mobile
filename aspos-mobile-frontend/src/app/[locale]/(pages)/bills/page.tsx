@@ -31,7 +31,7 @@ export default function Bills() {
     { amount: 0, price: 0 }
   );
 
-  const totalPrice = totalAmount.price + 100; 
+  const totalPrice = totalAmount.price + 100;
 
   const handleConfirm = () => {
     setShowModal(false);
@@ -70,18 +70,18 @@ export default function Bills() {
           >
             <BillCard
               key={bill.id}
-              imageUrl={bill.imageUrl||BunLogo} 
+              imageUrl={bill.imageUrl || BunLogo}
               title={bill.name}
               description={bill.description || 'No description available'}
               price={bill.price}
               quantity={bill.quantity}
-              status="Pending" 
+              status="Pending"
             />
           </div>
         ))}
       </div>
 
-      <div className="pt-4 md:pt-6">
+      <div className="pt-4 md:pt-6 pb-28 md:pb-36">
         <div className="flex justify-between md:text-xl font-medium text-gray-400">
           <div>{t('price')}</div>
           <div>฿{totalAmount.price}</div>
@@ -96,7 +96,7 @@ export default function Bills() {
         </div>
       </div>
 
-      <footer className="sticky bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
+      <footer className="fixed bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
         <button
           className="py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-center"
           onClick={handleOpenModal}
@@ -113,13 +113,13 @@ export default function Bills() {
             <h2 className="text-lg md:text-2xl font-bold mb-4">{t('titleModal')}</h2>
             <p className="text-sm md:text-lg mb-6">{t('descriptionModal')}</p>
             <div className="flex justify-end">
-            <Link href={`/${lang}/success`}>
-            <button
-                className="px-4 py-2 flex justify-center bg-green text-white rounded-2xl md:text-lg w-20 md:w-24"
-                onClick={handleConfirm}
-              >
-                {t('buttonModal')}
-              </button>
+              <Link href={`/${lang}/success`}>
+                <button
+                  className="px-4 py-2 flex justify-center bg-green text-white rounded-2xl md:text-lg w-20 md:w-24"
+                  onClick={handleConfirm}
+                >
+                  {t('buttonModal')}
+                </button>
               </Link>
             </div>
           </div>
