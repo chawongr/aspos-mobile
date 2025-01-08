@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
 import { useBasket } from '@/app/[locale]/components/context/basket-context';
-import { Food2 } from '@/app/[locale]/components/all-image'
+import { BunLogo } from '@/app/[locale]/components/all-image'
 import { useAllList } from '@/app/[locale]/components/context/all-list-context';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -70,7 +70,7 @@ export default function OrderList() {
           <div key={order.id} className={`${index !== basket.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}>
             <OrderCard
               key={order.id}
-              imageUrl={Food2} 
+              imageUrl={order.imageUrl||BunLogo} 
               title={order.name}
               description={order.description}
               price={order.price}

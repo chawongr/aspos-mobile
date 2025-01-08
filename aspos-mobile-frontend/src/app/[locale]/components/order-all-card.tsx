@@ -1,5 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { BunLogo } from './all-image';
 
 interface OrderCardProps {
     imageUrl: string | StaticImageData; // Accept both string and StaticImageData
@@ -12,10 +13,10 @@ interface OrderCardProps {
 
 export default function OrderAllCard({ imageUrl, title, description, price, quantity, status }: OrderCardProps) {
     const getStatusClass = () => {
-        if (status === 'กำลังทำ') {
+        if (status === 'Pending') {
         return 'bg-orange';
         }
-        if (status === 'เสร็จสิ้น') {
+        if (status === 'Success') {
         return 'bg-green';
         }
         return 'bg-gray-400'; 
@@ -26,7 +27,7 @@ export default function OrderAllCard({ imageUrl, title, description, price, quan
             {/* Image */}
             <div className="w-[85px] h-[85px] md:w-[105px] md:h-[105px] flex-shrink-0">
                 <Image
-                src={imageUrl}
+                src={imageUrl||BunLogo}
                 alt={title}
                 width={105}
                 height={105}

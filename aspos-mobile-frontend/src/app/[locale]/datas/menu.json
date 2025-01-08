@@ -10,7 +10,8 @@
                     "name": "Coffee",
                     "description": "Freshly brewed coffee with a rich aroma.",
                     "price":70,
-                    "condiments": ["Sugar", "Cream"]
+                    "condiments": ["Sugar", "Cream"],
+                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_1.jpg"
                 },
                 {
                     "id": 2,

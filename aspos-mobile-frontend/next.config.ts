@@ -10,6 +10,10 @@ const createNextIntlPlugin = require('next-intl/plugin');
 const withNextIntl = createNextIntlPlugin();
  
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        domains: ['cdn-pos.atee.dev'], // Add the external image domain here
+      },
+};
  
 module.exports = withNextIntl(nextConfig);
