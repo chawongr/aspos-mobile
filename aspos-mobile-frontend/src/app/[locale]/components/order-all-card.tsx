@@ -29,8 +29,8 @@ export default function OrderAllCard({ imageUrl, title, description, price, quan
                 <Image
                 src={imageUrl||BunLogo}
                 alt={title}
-                width={105}
-                height={105}
+                width={500}
+                height={500}
                 className="rounded-lg object-cover w-full h-full"
                 />
             </div>
