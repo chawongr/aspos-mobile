@@ -217,7 +217,7 @@ export default function Home() {
 
       {basket.length > 0 && (
         <Link href={`${path}/order-list`}>
-          <footer className="sticky bottom-5 w-full py-4 px-5 text-white bg-green rounded-full ">
+          <footer className="sticky bottom-5 w-full py-4 md:py-5 px-5 text-white bg-green rounded-full ">
             <div className="flex justify-between items-center">
               <div className='flex'>
                 <div><SlBasket className='h-5 w-5 mr-2' /></div>
