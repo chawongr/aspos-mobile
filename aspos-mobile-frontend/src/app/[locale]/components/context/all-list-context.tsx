@@ -12,6 +12,7 @@ interface AllListItem {
     quantity: number;
     status: string;
     uniqueKey: string;
+    imageUrl?: string;
 }
 
 interface AllListContextProps {

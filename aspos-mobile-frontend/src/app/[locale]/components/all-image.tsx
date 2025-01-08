@@ -13,6 +13,7 @@ import SoftDrink from '../../../../public/soft-drink.png'
 import Waiter from '../../../../public/waiter.png'
 import Success from '../../../../public/success.gif'
 import BillNew from '../../../../public/bill-new.svg'
+import BunLogo from '../../../../public/bunLogo.png'
 
 export { 
     ThFlag,
@@ -29,5 +30,6 @@ export {
     SoftDrink,
     Waiter,
     Success,
-    BillNew
+    BillNew,
+    BunLogo
 }

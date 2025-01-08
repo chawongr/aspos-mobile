@@ -2,7 +2,7 @@
 
 import { useParams, useRouter, usePathname } from 'next/navigation';
 import CategoriesData from '@/app/[locale]/datas/menu.json';
-import { Food1 } from '@/app/[locale]/components/all-image';
+import { BunLogo } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 import AccordionCondiment from '../../components/accordion-condiment';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
@@ -18,6 +18,7 @@ interface MenuItem {
   price: number;
   quantity?: number;
   condiments?: string[];
+  imageUrl?: string;
 }
 
 export default function MenuItemDetail() {
@@ -62,6 +63,7 @@ export default function MenuItemDetail() {
       price: menuItem.price * currentQuantity,
       quantity: currentQuantity,
       description: menuItem.description,
+      imageUrl: menuItem.imageUrl
     });
   };
 
@@ -75,9 +77,11 @@ export default function MenuItemDetail() {
       </button>
       <div>
         <Image
-          src={Food1}
+          src={menuItem.imageUrl||BunLogo}
           alt="Bill Icon"
-          className="object-cover h-48 w-screen rounded-2xl"
+          className="object-contain h-48 md:h-60 w-full rounded-2xl"
+          width={100}
+          height={100}
         />
       </div>
       <div className="py-5">

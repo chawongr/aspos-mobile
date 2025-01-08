@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Bell, Bill, Food1, BillNew } from '@/app/[locale]/components/all-image';
+import { Bell, Bill, BunLogo, BillNew } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 import { FiSearch } from "react-icons/fi";
 import { IoChevronForward } from "react-icons/io5";
@@ -26,6 +26,7 @@ interface MenuItem {
   description: string;
   price: number;
   quantity?: number;
+  imageUrl?: string;
 }
 
 interface Category {
@@ -199,7 +200,7 @@ export default function Home() {
                       className={`${index !== category.menu.length - 1 ? 'border-b-[0.5px] border-borderGray' : ''}`}
                     >
                       <MenuCard
-                        imageUrl={Food1}
+                        imageUrl={menuItem.imageUrl||BunLogo}
                         title={menuItem.name}
                         description={menuItem.description}
                         price={menuItem.price}
