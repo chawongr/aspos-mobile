@@ -40,8 +40,8 @@ export default function OrderList() {
   const handleSendToAllList = () => {
     const allListData = basket.map((item) => ({
       ...item,
-      description: item.description || "", 
-      status: 'Pending', 
+      description: item.description || "",
+      status: 'Pending',
       uniqueKey: uuidv4(),
     }));
     addToAllList(allListData);
@@ -65,23 +65,23 @@ export default function OrderList() {
         <div className="w-7 h-7 md:w-9 md:h-9" />
       </header>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto pb-28 md:pb-36">
         {basket.map((order, index) => (
           <div key={order.id} className={`${index !== basket.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}>
             <OrderCard
               key={order.id}
-              imageUrl={order.imageUrl||BunLogo} 
+              imageUrl={order.imageUrl || BunLogo}
               title={order.name}
               description={order.description}
               price={order.price}
               quantity={order.quantity}
-              status="Pending" 
+              status="Pending"
             />
           </div>
         ))}
       </div>
 
-      <footer className="sticky bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
+      <footer className="fixed bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
         <div className="flex justify-between text-lg md:text-2xl font-medium">
           <div>{totalAmount.amount} {t('order')}</div>
           <div>฿{totalAmount.price}</div>
@@ -98,4 +98,5 @@ export default function OrderList() {
       </footer>
     </div>
   );
+
 }
