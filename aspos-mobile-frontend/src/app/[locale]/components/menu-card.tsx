@@ -18,7 +18,9 @@ export default function MenuCard({ imageUrl, title, description, price, quantity
                 <Image
                     src={imageUrl}
                     alt={title}
-                    className="rounded-lg object-cover w-full h-full"
+                    className="rounded-lg object-contain w-full h-full"
+                    width={500} 
+                    height={500} 
                 />
             </div>
 

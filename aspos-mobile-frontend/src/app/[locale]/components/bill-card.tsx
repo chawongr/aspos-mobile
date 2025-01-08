@@ -19,9 +19,9 @@ export default function BillCard({ imageUrl, title, description, price, quantity
                 <Image
                 src={imageUrl}
                 alt={title}
-                width={105}
-                height={105}
-                className="rounded-lg object-cover w-full h-full"
+                width={100}
+                height={100}
+                className="rounded-lg object-contain w-full h-full"
                 />
             </div>
 

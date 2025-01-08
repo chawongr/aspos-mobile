@@ -1,4 +1,3 @@
-// context/BasketContext.tsx
 'use client';
 import React, { createContext, useContext, useState } from 'react';
 
@@ -8,11 +7,13 @@ interface BasketItem {
   price: number;
   quantity: number;
   description?: string;
+  imageUrl?: string;
 }
 
 interface BasketContextProps {
   basket: BasketItem[];
   addToBasket: (item: BasketItem) => void;
+  clearBasket: () => void;
 }
 
 const BasketContext = createContext<BasketContextProps | undefined>(undefined);
@@ -34,8 +35,12 @@ export const BasketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     });
   };
 
+  const clearBasket = () => {
+    setBasket([]); 
+  };
+
   return (
-    <BasketContext.Provider value={{ basket, addToBasket }}>
+    <BasketContext.Provider value={{ basket, addToBasket, clearBasket }}>
       {children}
     </BasketContext.Provider>
   );

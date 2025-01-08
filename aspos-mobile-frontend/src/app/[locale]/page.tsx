@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Bell, Bill, Food1 } from '@/app/[locale]/components/all-image';
+import { Bell, Bill, BunLogo, BillNew } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 import { FiSearch } from "react-icons/fi";
 import { IoChevronForward } from "react-icons/io5";
@@ -17,6 +17,7 @@ import TableModal from './components/table-modal';
 import WaiterModal from './components/waiter-modal';
 import { useBasket } from './components/context/basket-context';
 import { SlBasket } from "react-icons/sl";
+import { useAllList } from '@/app/[locale]/components/context/all-list-context';
 
 
 interface MenuItem {
@@ -25,6 +26,7 @@ interface MenuItem {
   description: string;
   price: number;
   quantity?: number;
+  imageUrl?: string;
 }
 
 interface Category {
@@ -37,16 +39,14 @@ export default function Home() {
   const MenuPage = useTranslations('MenuPage');
   const Categories: Category[] = CategoriesData.category;
   const { basket } = useBasket();
+  const { allList } = useAllList();
 
 
   const path = usePathname().substring(1);
 
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTableModalOpen, setIsTableModalOpen] = useState(false);
   const [isWaiterModalOpen, setIsWaiterModalOpen] = useState(false);
-
-
 
   const handleTabClick = (categoryId: number) => {
     const stickyHeight = 150;
@@ -86,7 +86,7 @@ export default function Home() {
             <Link href={`${path}/order-list-all`}>
               <div className="w-[22px] h-[22px] mb-1 md:mb-1 md:w-[32px] md:h-[32px]">
                 <Image
-                  src={Bill}
+                  src={allList.length > 0 ? BillNew : Bill}
                   alt="Bill Icon"
                   width={64}
                   height={64}
@@ -200,7 +200,7 @@ export default function Home() {
                       className={`${index !== category.menu.length - 1 ? 'border-b-[0.5px] border-borderGray' : ''}`}
                     >
                       <MenuCard
-                        imageUrl={Food1}
+                        imageUrl={menuItem.imageUrl||BunLogo}
                         title={menuItem.name}
                         description={menuItem.description}
                         price={menuItem.price}
@@ -217,7 +217,7 @@ export default function Home() {
 
       {basket.length > 0 && (
         <Link href={`${path}/order-list`}>
-          <footer className="sticky bottom-5 w-full py-4 px-5 text-white bg-green rounded-full ">
+          <footer className="sticky bottom-5 w-full py-4 md:py-5 px-5 text-white bg-green rounded-full ">
             <div className="flex justify-between items-center">
               <div className='flex'>
                 <div><SlBasket className='h-5 w-5 mr-2' /></div>

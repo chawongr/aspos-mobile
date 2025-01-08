@@ -1,5 +1,6 @@
 import React from 'react'
-import Success from '../../../../../public/success.gif'
+import { Success } from '@/app/[locale]/components/all-image';
+
 import Image from 'next/image';
 
 const Page = () => {

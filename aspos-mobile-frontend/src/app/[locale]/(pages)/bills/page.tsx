@@ -1,26 +1,28 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import BillCard from '../../components/bill-card';
 import { FaRegUser } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
-import { useBasket } from '@/app/[locale]/components/context/basket-context';
-import { Food2 } from '../../components/all-image';
+import { BunLogo } from '../../components/all-image';
+import { useAllList } from '@/app/[locale]/components/context/all-list-context';
+
 
 export default function Bills() {
   const path = usePathname().substring(1);
   const lang = path.split('/')[0];
 
+  const { allList } = useAllList();
+
+
   const [showModal, setShowModal] = useState(false);
-  const { basket } = useBasket();
 
   const t = useTranslations('BillPage');
 
-  // Calculate total quantities and prices from basket
-  const totalAmount = basket.reduce(
+  const totalAmount = allList.reduce(
     (acc, item) => {
       acc.amount += item.quantity;
       acc.price += item.quantity * item.price;
@@ -38,11 +40,6 @@ export default function Bills() {
   const handleOpenModal = () => {
     setShowModal(true);
   };
-
-  // Debug basket data
-  useEffect(() => {
-    console.log('Basket data:', basket);
-  }, [basket]);
 
   return (
     <div className="flex flex-col relative">
@@ -66,19 +63,19 @@ export default function Bills() {
       </div>
 
       <div className="flex-1 overflow-y-auto">
-        {basket.map((bill, index) => (
+        {allList.map((bill, index) => (
           <div
-            key={bill.id}
-            className={`${index !== basket.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}
+            key={bill.uniqueKey}
+            className={`${index !== allList.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}
           >
             <BillCard
               key={bill.id}
-              imageUrl={Food2} // Replace with actual image if available
+              imageUrl={bill.imageUrl||BunLogo} 
               title={bill.name}
               description={bill.description || 'No description available'}
               price={bill.price}
               quantity={bill.quantity}
-              status="Pending" // Replace with actual status if available
+              status="Pending" 
             />
           </div>
         ))}
