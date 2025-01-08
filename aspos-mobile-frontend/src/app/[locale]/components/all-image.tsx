@@ -11,6 +11,8 @@ import Cutlery from '../../../../public/cutlery.png'
 import Ketchup from '../../../../public/ketchup.png'
 import SoftDrink from '../../../../public/soft-drink.png'
 import Waiter from '../../../../public/waiter.png'
+import Success from '../../../../public/success.gif'
+import BillNew from '../../../../public/bill-new.svg'
 
 export { 
     ThFlag,
@@ -25,5 +27,7 @@ export {
     Cutlery,
     Ketchup,
     SoftDrink,
-    Waiter
+    Waiter,
+    Success,
+    BillNew
 }

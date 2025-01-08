@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Bell, Bill, Food1 } from '@/app/[locale]/components/all-image';
+import { Bell, Bill, Food1, BillNew } from '@/app/[locale]/components/all-image';
 import Image from 'next/image';
 import { FiSearch } from "react-icons/fi";
 import { IoChevronForward } from "react-icons/io5";
@@ -17,6 +17,7 @@ import TableModal from './components/table-modal';
 import WaiterModal from './components/waiter-modal';
 import { useBasket } from './components/context/basket-context';
 import { SlBasket } from "react-icons/sl";
+import { useAllList } from '@/app/[locale]/components/context/all-list-context';
 
 
 interface MenuItem {
@@ -37,6 +38,8 @@ export default function Home() {
   const MenuPage = useTranslations('MenuPage');
   const Categories: Category[] = CategoriesData.category;
   const { basket } = useBasket();
+  const { allList } = useAllList();
+
 
   const path = usePathname().substring(1);
 
@@ -82,7 +85,7 @@ export default function Home() {
             <Link href={`${path}/order-list-all`}>
               <div className="w-[22px] h-[22px] mb-1 md:mb-1 md:w-[32px] md:h-[32px]">
                 <Image
-                  src={Bill}
+                  src={allList.length > 0 ? BillNew : Bill}
                   alt="Bill Icon"
                   width={64}
                   height={64}

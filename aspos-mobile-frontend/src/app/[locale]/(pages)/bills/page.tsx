@@ -65,7 +65,7 @@ export default function Bills() {
       <div className="flex-1 overflow-y-auto">
         {allList.map((bill, index) => (
           <div
-            key={bill.id}
+            key={bill.uniqueKey}
             className={`${index !== allList.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}
           >
             <BillCard
