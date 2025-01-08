@@ -9,15 +9,19 @@ import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
 import { useBasket } from '@/app/[locale]/components/context/basket-context';
 import { Food2 } from '@/app/[locale]/components/all-image'
+import { useAllList } from '@/app/[locale]/components/context/all-list-context';
+
 
 export default function OrderList() {
   const path = usePathname().substring(1);
   const lang = path.split('/')[0];
 
-  const t = useTranslations('OrderPage');
-  const { basket } = useBasket();
+  const { addToAllList } = useAllList();
 
-  // Calculate total amount and price from the basket
+
+  const t = useTranslations('OrderPage');
+  const { basket, clearBasket } = useBasket();
+
   const totalAmount = basket.reduce(
     (acc, item) => {
       acc.amount += item.quantity;
@@ -27,13 +31,21 @@ export default function OrderList() {
     { amount: 0, price: 0 }
   );
 
-  // Format time function
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(":");
     return `${hours}:${minutes}`;
   };
 
-  // Mocking time for the order (can replace with real logic if available)
+  const handleSendToAllList = () => {
+    const allListData = basket.map((item) => ({
+      ...item,
+      description: item.description || "", 
+      status: 'Pending', 
+    }));
+    addToAllList(allListData);
+    clearBasket();
+  };
+
   const orderTime = "19:01:00";
 
   return (
@@ -56,12 +68,12 @@ export default function OrderList() {
           <div key={order.id} className={`${index !== basket.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}>
             <OrderCard
               key={order.id}
-              imageUrl={Food2} // Replace with the actual image if available
+              imageUrl={Food2} 
               title={order.name}
               description={order.description}
               price={order.price}
               quantity={order.quantity}
-              status="Pending" // Replace with actual status if available
+              status="Pending" 
             />
           </div>
         ))}
@@ -73,7 +85,10 @@ export default function OrderList() {
           <div>฿{totalAmount.price}</div>
         </div>
         <Link href={`/${lang}`}>
-          <button className="py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-center">
+          <button
+            onClick={handleSendToAllList}
+            className="py-4 md:py-5 text-base md:text-xl font-medium text-white bg-green rounded-full w-full flex items-center justify-center"
+          >
             <PiRocketLaunchLight className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" />
             {t('button')}
           </button>
