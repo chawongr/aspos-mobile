@@ -91,7 +91,7 @@ export default function MenuItemDetail() {
       <div className="">
         <AccordionCondiment />
       </div>
-      <div className="py-5">
+      <div className="pt-5 pb-28 md:pb-36">
         <div className="text-lg font-semibold">Note</div>
         <textarea
           className="border border-borderGray w-full rounded-xl p-4"
@@ -101,7 +101,7 @@ export default function MenuItemDetail() {
         ></textarea>
       </div>
 
-      <footer className="absolute bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
+      <footer className="fixed bottom-0 w-full-p-5 md:w-full-p-10 py-6 md:py-10 flex flex-col gap-2 md:gap-4 bg-white">
         <div className="flex justify-between text-lg md:text-2xl font-medium">
           <div className="flex justify-end items-center gap-1.5 md:gap-3">
             <CiCircleMinus

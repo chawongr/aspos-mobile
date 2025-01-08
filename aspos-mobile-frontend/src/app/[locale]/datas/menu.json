@@ -8,29 +8,27 @@
                 {
                     "id": 1,
                     "name": "ทิมเบอร์ริงไวท์ช็อก",
-                    "description": "",
-                    "price":26,
-                    "condiments": ["Surup", "Whipping Cream","Ice Cream"],
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_44.jpg"
+                    "description": "Timbering White Chocolate",
+                    "price": 26,
+                    "condiments": ["Surup", "Whipping Cream", "Ice Cream"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_44.jpg"
                 },
                 {
                     "id": 7,
                     "name": "ทิมเบอร์ริงดาร์กช็อก",
-                    "description": "",
+                    "description": "Timbering Dark Chocolate",
                     "price": 99,
-                    "condiments": ["Surup", "Whipping Cream","Ice Cream"],
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_43.jpg"
+                    "condiments": ["Surup", "Whipping Cream", "Ice Cream"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_43.jpg"
                 },
                 {
                     "id": 8,
                     "name": "ทิมเบอร์ริงโอวัลตินครั้นชี่",
-                    "description": "",
+                    "description": "Timbering Ovaltine Crunchy",
                     "price": 49,
-                    "condiments": ["Surup", "Whipping Cream","Ice Cream"],
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_45.jpg"
-
+                    "condiments": ["Surup", "Whipping Cream", "Ice Cream"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_45.jpg"
                 }
-
             ]
         },
         {
@@ -40,32 +38,33 @@
                 {
                     "id": 9,
                     "name": "วาฟเฟิลถั่วแดง",
-                    "description": "",
+                    "description": "Waffle with Red Bean",
                     "price": 79,
-                    "condiments": ["Chocolate Sauce", "Strawberry Sauce","Caramel Sauce"],
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_46.jpg"
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_46.jpg"
                 },
                 {
                     "id": 10,
                     "name": "วาฟเฟิลเผือก",
-                    "description": "",
+                    "description": "Waffle with Taro",
                     "price": 49,
-                    "condiments": ["Chocolate Sauce", "Strawberry Sauce","Caramel Sauce"],
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_47.jpg"
-                },{
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_47.jpg"
+                },
+                {
                     "id": 11,
                     "name": "ครอฟเฟิลครีมมี่อัลมอนด์",
-                    "description": "",
+                    "description": "Creamy Almond Croffle",
                     "price": 79,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_48.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_48.jpg"
                 },
                 {
                     "id": 12,
                     "name": "วาฟเฟิลมะพร้าวอ่อน",
-                    "description": "",
+                    "description": "Waffle with Young Coconut",
                     "price": 99,
-                    "condiments": ["Chocolate Sauce", "Strawberry Sauce","Caramel Sauce"],
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_49.jpg"
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_49.jpg"
                 }
             ]
         },
@@ -76,16 +75,16 @@
                 {
                     "id": 14,
                     "name": "ครัวซองต์เนยสด",
-                    "description": "",
+                    "description": "Fresh Butter Croissant",
                     "price": 79,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_54.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_54.jpg"
                 },
                 {
                     "id": 15,
                     "name": "ครัวซองต์ครีมมี่ช็อกโก้",
-                    "description": "",
+                    "description": "Creamy Choco Croissant",
                     "price": 49,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_56.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_56.jpg"
                 }
             ]
         },
@@ -96,52 +95,51 @@
                 {
                     "id": 2,
                     "name": "เบลเยี่ยมสตรอว์เบอรรี่",
-                    "description": "",
+                    "description": "Belgium Strawberry",
                     "price": 26,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_38.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_38.jpg"
                 },
                 {
                     "id": 3,
                     "name": "มิลค์กี้ครีมบัน",
-                    "description": "",
+                    "description": "Milky Cream Bun",
                     "price": 99,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_39.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_39.jpg"
                 },
                 {
                     "id": 4,
                     "name": "เบลเยี่ยมไวท์ช็อก",
-                    "description": "",
+                    "description": "Belgium White Chocolate",
                     "price": 39,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_40.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_40.jpg"
                 },
                 {
                     "id": 5,
                     "name": "บันเนยสด",
-                    "description": "",
+                    "description": "Fresh Butter Bun",
                     "price": 99,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_41.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_41.jpg"
                 },
                 {
                     "id": 6,
                     "name": "เบลเยี่ยมช็อกโกแลต",
-                    "description": "",
+                    "description": "Belgium Chocolate",
                     "price": 79,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_42.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_42.jpg"
                 },
                 {
                     "id": 11,
                     "name": "ครอฟเฟิลครีมมี่อัลมอนด์",
-                    "description": "",
+                    "description": "Creamy Almond Croffle",
                     "price": 79,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_48.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_48.jpg"
                 },
                 {
                     "id": 13,
                     "name": "ดาร์กครอฟเฟิล",
-                    "description": "",
+                    "description": "Dark Croffle",
                     "price": 49,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_50.jpg"
-
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_50.jpg"
                 }
             ]
         },
@@ -152,109 +150,107 @@
                 {
                     "id": 11,
                     "name": "มอคค่าร้อน",
-                    "description": "",
+                    "description": "Hot Mocha",
                     "price": 60,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_23.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_23.jpg"
                 },
                 {
                     "id": 12,
                     "name": "คลาซซี่ ออเร้นจ์ อเมริกาโน่",
-                    "description": "",
+                    "description": "Classy Orange Americano",
                     "price": 60,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_10.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_10.jpg"
                 },
                 {
                     "id": 13,
                     "name": "เขาช่องต้นตำรับ",
-                    "description": "",
+                    "description": "Original Khao Chong",
                     "price": 99,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_8.jpg"
-
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_8.jpg"
                 },
                 {
                     "id": 14,
                     "name": "โอเลี้ยง",
-                    "description": "",
+                    "description": "Oliang",
                     "price": 159,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_8.jpg"
-
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_8.jpg"
                 },
                 {
                     "id": 15,
                     "name": "คริสตัลโคโค่อเมริกาโน่",
-                    "description": "",
+                    "description": "Crystal Coco Americano",
                     "price": 79,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_11.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_11.jpg"
                 },
                 {
                     "id": 16,
                     "name": "อเมริกาโนเย็น",
-                    "description": "",
+                    "description": "Iced Americano",
                     "price": 119,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_12.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_12.jpg"
                 },
                 {
                     "id": 17,
                     "name": "ลาเต้",
-                    "description": "",
+                    "description": "Latte",
                     "price": 139,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_13.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_13.jpg"
                 },
                 {
                     "id": 18,
                     "name": "คาปูชิโน",
-                    "description": "",
+                    "description": "Cappuccino",
                     "price": 109,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_14.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_14.jpg"
                 },
                 {
                     "id": 19,
                     "name": "มอคค่า",
-                    "description": "",
+                    "description": "Mocha",
                     "price": 129,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_15.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_15.jpg"
                 },
                 {
                     "id": 20,
                     "name": "ยกล้อ",
-                    "description": "",
+                    "description": "Yok Lor",
                     "price": 199,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_17.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_17.jpg"
                 },
                 {
                     "id": 21,
                     "name": "ลาเต้ร้อน",
-                    "description": "",
+                    "description": "Hot Latte",
                     "price": 199,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_18.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_18.jpg"
                 },
                 {
                     "id": 22,
                     "name": "กาแฟเย็นเขาช่อง",
-                    "description": "",
+                    "description": "Iced Khao Chong Coffee",
                     "price": 199,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_19.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_19.jpg"
                 },
                 {
                     "id": 23,
                     "name": "ครีมมี่โอวัลตินเฟลค",
-                    "description": "",
+                    "description": "Creamy Ovaltine Flake",
                     "price": 199,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_2.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_2.jpg"
                 },
                 {
                     "id": 24,
                     "name": "โกโก้ร้อน",
-                    "description": "",
+                    "description": "Hot Cocoa",
                     "price": 199,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_36.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_36.jpg"
                 },
                 {
                     "id": 25,
                     "name": "ชาไทย",
-                    "description": "",
+                    "description": "Thai Tea",
                     "price": 199,
-                    "imageUrl":"https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_25.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_25.jpg"
                 }
             ]
         }
