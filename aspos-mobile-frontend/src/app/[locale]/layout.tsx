@@ -38,7 +38,7 @@ export default async function LocaleLayout({
   return (
     <html lang={validLocale}>
       <body
-        className={`${noto.className} p-5 md:p-10 h-screen w-screen box-border text-sm text-darkGray`}
+        className={`${noto.className} p-5 md:p-10 text-sm text-darkGray`}
       >
         <NextIntlClientProvider messages={messages}>
           <BasketProvider>

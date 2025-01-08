@@ -47,7 +47,7 @@ export default function OrderCard({ imageUrl, title, description, price, quantit
                 alt={title}
                 width={500}
                 height={500}
-                className="rounded-lg object-cover w-full h-full"
+                className="rounded-lg object-contain w-full h-full"
                 />
             </div>
 
