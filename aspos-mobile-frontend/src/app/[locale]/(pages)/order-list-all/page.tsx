@@ -7,18 +7,18 @@ import { CiViewList } from "react-icons/ci";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
-import { useBasket } from '@/app/[locale]/components/context/basket-context';
 import { Food2 } from '../../components/all-image';
+import { useAllList } from '@/app/[locale]/components/context/all-list-context';
+
 
 export default function OrderListAll() {
   const path = usePathname().substring(1);
   const lang = path.split('/')[0];
 
   const t = useTranslations('OrderAllPage');
-  const { basket } = useBasket();
+  const { allList } = useAllList();
 
-  // Calculate total quantity and price
-  const totalAmount = basket.reduce(
+  const totalAmount = allList.reduce(
     (acc, item) => {
       acc.amount += item.quantity;
       acc.price += item.quantity * item.price;
@@ -27,19 +27,16 @@ export default function OrderListAll() {
     { amount: 0, price: 0 }
   );
 
-  // Format time function
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(":");
     return `${hours}:${minutes}`;
   };
 
-  // Mocking order time (you can replace this with actual logic)
   const orderTime = "19:01:00";
 
-  // UseEffect to debug basket data
   useEffect(() => {
-    console.log('Basket data:', basket);
-  }, [basket]);
+    console.log('Basket data:', allList);
+  }, [allList]);
 
   return (
     <div className="flex flex-col relative">
@@ -57,19 +54,19 @@ export default function OrderListAll() {
       </header>
 
       <div className="flex-1 overflow-y-auto">
-        {basket.map((order, index) => (
+        {allList.map((order, index) => (
           <div
             key={order.id}
-            className={`${index !== basket.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}
+            className={`${index !== allList.length - 1 ? 'border-b-[0.5px] border-borderGray ' : ''}`}
           >
             <OrderAllCard
               key={order.id}
-              imageUrl={Food2} // Replace with the actual image if available
+              imageUrl={Food2} 
               title={order.name}
               description={order.description || 'No description available'}
               price={order.price}
               quantity={order.quantity}
-              status="Pending" // Replace with actual status if available
+              status="Pending" 
             />
           </div>
         ))}

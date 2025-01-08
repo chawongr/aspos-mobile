@@ -38,15 +38,11 @@ export default function Home() {
   const Categories: Category[] = CategoriesData.category;
   const { basket } = useBasket();
 
-
   const path = usePathname().substring(1);
-
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isTableModalOpen, setIsTableModalOpen] = useState(false);
   const [isWaiterModalOpen, setIsWaiterModalOpen] = useState(false);
-
-
 
   const handleTabClick = (categoryId: number) => {
     const stickyHeight = 150;
