@@ -65,6 +65,38 @@
                     "price": 99,
                     "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
                     "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_49.jpg"
+                },
+                {
+                    "id": 13,
+                    "name": "บราวน์ชูก้าอัลมอนด์ครอฟเฟิล",
+                    "description": "Brown Sugar Almond Croffle",
+                    "price": 99,
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_51.jpg"
+                },
+                {
+                    "id": 45,
+                    "name": "อัลมอนด์ครอฟเฟิล",
+                    "description": "Almond Croffle",
+                    "price": 99,
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_52.jpg"
+                },
+                {
+                    "id": 46,
+                    "name": "ครอฟเฟิลบราวน์ชูก้า",
+                    "description": "Croffle Brown Sugar",
+                    "price": 99,
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_53.jpg"
+                },
+                {
+                    "id": 47,
+                    "name": "ออริจินัลครอฟเฟิล",
+                    "description": "Original Croffle",
+                    "price": 99,
+                    "condiments": ["Chocolate Sauce", "Strawberry Sauce", "Caramel Sauce"],
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_55.jpg"
                 }
             ]
         },
@@ -85,6 +117,20 @@
                     "description": "Creamy Choco Croissant",
                     "price": 49,
                     "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_56.jpg"
+                },
+                {
+                    "id": 48,
+                    "name": "ครัวซองต์ไส้กรอกไก่",
+                    "description": "Chicken Sausage Croissant",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_57.jpg"
+                },
+                {
+                    "id": 49,
+                    "name": "ครัวซองต์ครีมมี่อัลมอนด์",
+                    "description": "Creamy Almond Croissant",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_58.jpg"
                 }
             ]
         },
@@ -128,18 +174,60 @@
                     "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_42.jpg"
                 },
                 {
-                    "id": 11,
-                    "name": "ครอฟเฟิลครีมมี่อัลมอนด์",
-                    "description": "Creamy Almond Croffle",
-                    "price": 79,
-                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_48.jpg"
-                },
-                {
                     "id": 13,
                     "name": "ดาร์กครอฟเฟิล",
                     "description": "Dark Croffle",
                     "price": 49,
                     "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_50.jpg"
+                },
+                {
+                    "id": 50,
+                    "name": "มะพร้าวช็อกชิพ",
+                    "description": "Coconut Choc Chip",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_59.jpg"
+                },
+                {
+                    "id": 51,
+                    "name": "นมสด",
+                    "description": "Milk",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_61.jpg"
+                },
+                {
+                    "id": 52,
+                    "name": "กาแฟช็อกชิพ",
+                    "description": "Coffee Choc Chip",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_62.jpg"
+                },
+                {
+                    "id": 53,
+                    "name": "ช็อกโก้",
+                    "description": "Chocco",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_63.jpg"
+                },
+                {
+                    "id": 54,
+                    "name": "วนิลลา",
+                    "description": "Vanilla",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_64.jpg"
+                },
+                {
+                    "id": 55,
+                    "name": "มะพร้าว",
+                    "description": "Coconut",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_65.jpg"
+                },
+                {
+                    "id": 56,
+                    "name": "กาแฟ",
+                    "description": "Coffee",
+                    "price": 49,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_66.jpg"
                 }
             ]
         },
@@ -173,7 +261,7 @@
                     "name": "โอเลี้ยง",
                     "description": "Oliang",
                     "price": 159,
-                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_8.jpg"
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_9.jpg"
                 },
                 {
                     "id": 15,
@@ -251,6 +339,140 @@
                     "description": "Thai Tea",
                     "price": 199,
                     "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_25.jpg"
+                }
+                ,
+                {
+                    "id": 57,
+                    "name": "โอวัลติน U.H.T.",
+                    "description": "Ovaltine",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_1.jpg"
+                },
+                {
+                    "id": 27,
+                    "name": "อเมริกาโนร้อน",
+                    "description": "Hot Americano",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_20.jpg"
+                },
+                {
+                    "id": 28,
+                    "name": "เอสเพรสโศ่ ช็อต",
+                    "description": "Espresso Shot",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_21.jpg"
+                },
+                {
+                    "id": 29,
+                    "name": "ชาไทย",
+                    "description": "Hot Thai Tea",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_24.jpg"
+                },
+                {
+                    "id": 30,
+                    "name": "คาปูชิโนร้อน",
+                    "description": "Hot Cappuccino",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_22.jpg"
+                },
+                {
+                    "id": 31,
+                    "name": "ชาเขียวมััทฉะร้อน",
+                    "description": "Hot Matcha Tea",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_26.jpg"
+                },
+                {
+                    "id": 32,
+                    "name": "ชาเขียวมััทฉะ",
+                    "description": "Matcha Tea",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_27.jpg"
+                },
+                {
+                    "id": 33,
+                    "name": "ชาเขียวมััทฉะ",
+                    "description": "Matcha Tea",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_27.jpg"
+                },
+                {
+                    "id": 34,
+                    "name": "ซากุระฟิซซี่ยูสุ",
+                    "description": "Sakura Fizzy Yuzu",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_28.jpg"
+                },
+                {
+                    "id": 35,
+                    "name": "ลิ้นจี่่ซัมเมอร์โซดา",
+                    "description": "Lychee Summer Soda",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_3.jpg"
+                },
+                {
+                    "id": 36,
+                    "name": "ซากุระจัสมินยูสุ",
+                    "description": "Sakura Jasmin Yuzu",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_30.jpg"
+                },
+                {
+                    "id": 37,
+                    "name": "โอคิโระแบล็คยูสุ",
+                    "description": "Okiro Black Yuzu",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_32.jpg"
+                },
+                {
+                    "id": 38,
+                    "name": "โกโก้",
+                    "description": "Cocoa",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_33.jpg"
+                },
+                {
+                    "id": 39,
+                    "name": "น้ำส้ม 250 ซีซี",
+                    "description": "Orange Juice 250 cc",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_35.jpg"
+                },
+                {
+                    "id": 40,
+                    "name": "น้ำผลไม้ชบา",
+                    "description": "Chabaa Fruit Juice",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_37.jpg"
+                },
+                {
+                    "id": 41,
+                    "name": "แพชชั่นซัมเมอร์โซดา",
+                    "description": "Passion Summer Soda",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_4.jpg"
+                },
+                {
+                    "id": 42,
+                    "name": "ชาไทย",
+                    "description": "Thai Tea",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_5.jpg"
+                },
+                {
+                    "id": 43,
+                    "name": "โกโก้",
+                    "description": "Cocoa",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_6.jpg"
+                },
+                {
+                    "id": 44,
+                    "name": "อเมริกาโน",
+                    "description": "Americano",
+                    "price": 199,
+                    "imageUrl": "https://cdn-pos.atee.dev/LINE_ALBUM_182025_250108_7.jpg"
                 }
             ]
         }
